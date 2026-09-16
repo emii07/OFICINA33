@@ -211,4 +211,4 @@ public class QuestionarioUI : MonoBehaviour
         conteudoPergunta3.SetActive(false);
         conteudoPergunta4.SetActive(false);
     }
-}
+} 
