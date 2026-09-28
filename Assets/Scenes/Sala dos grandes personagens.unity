@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.6469011, g: 0.21048418, b: 0.8113208, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2120,6 +2120,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1426515253 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6651546929638751459, guid: 77c0a7ed742f61a4aba05bcc15fd1eb1, type: 3}
+  m_PrefabInstance: {fileID: 1135876218}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1585223584
 GameObject:
   m_ObjectHideFlags: 0
@@ -2151,6 +2156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MostrarExplicacao
   painelExplicacao: {fileID: 68539990}
+  personagem: {fileID: 1426515253}
 --- !u!61 &1585223586
 BoxCollider2D:
   m_ObjectHideFlags: 0
