@@ -6,6 +6,11 @@ public class Estatua : MonoBehaviour
 
     private Vector3 posicaoInicial;
     private bool arrastando = false;
+    private bool acertou = false;
+
+    public GameObject painelVitoria;
+
+    private static int quantidadeAcertos = 0;
 
     void Start()
     {
@@ -19,7 +24,9 @@ public class Estatua : MonoBehaviour
 
     void OnMouseDrag()
     {
-        Vector3 posicaoMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 posicaoMouse = Camera.main.ScreenToWorldPoint(
+            Input.mousePosition
+        );
 
         posicaoMouse.z = transform.position.z;
 
@@ -30,22 +37,35 @@ public class Estatua : MonoBehaviour
     {
         arrastando = false;
 
-        Collider2D[] objetosPerto = Physics2D.OverlapCircleAll(
-            transform.position,
-            0.5f
-        );
+        Collider2D[] objetosPerto =
+            Physics2D.OverlapCircleAll(transform.position, 0.5f);
 
         foreach (Collider2D objeto in objetosPerto)
         {
-            Silhueta silhueta = objeto.GetComponent<Silhueta>();
+            Silhueta silhueta =
+                objeto.GetComponent<Silhueta>();
 
             if (silhueta != null)
             {
                 if (silhueta.VerificarEstatua(this))
                 {
-                    transform.position = silhueta.transform.position;
+                    transform.position =
+                        silhueta.transform.position;
 
                     Debug.Log("CORRETO! 🎉");
+
+                    // Conta o acerto apenas uma vez
+                    if (!acertou)
+                    {
+                        acertou = true;
+                        quantidadeAcertos++;
+
+                        if (quantidadeAcertos >= 4)
+                        {
+                            painelVitoria.SetActive(true);
+                        }
+                    }
+
                     return;
                 }
             }
