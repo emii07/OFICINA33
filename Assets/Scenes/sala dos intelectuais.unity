@@ -456,9 +456,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cantor
-
-'
+  m_text: " Oiteiro - Mem\xF3rias de uma sinh\xE1-mo\xE7a, nascida no Engenho "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -485,8 +483,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -998,7 +996,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Peru
+  m_text: Poetisa do Vale
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1025,8 +1023,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1583,8 +1581,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -187, y: 80}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 58.218506, y: 67.924805}
+  m_SizeDelta: {x: 690.437, y: 74.1503}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &307818517
 MonoBehaviour:
@@ -1606,8 +1604,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Qual m\xFAsica ajudou Olivia Rodrigo a alcan\xE7ar grande destaque em
-    2021?"
+  m_text: "De acordo com a biografia, de quais dois outros intelectuais cearamirinenses
+    a professora Etelvina Antunes era irm\xE3?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2292,8 +2290,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 72.76587, y: -5.8135}
+  m_SizeDelta: {x: 305.5316, y: 41.627}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &418813778
 MonoBehaviour:
@@ -2439,8 +2437,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -102}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 35.032227, y: -105.02002}
+  m_SizeDelta: {x: 230.0645, y: 36.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &435272726
 MonoBehaviour:
@@ -3136,8 +3134,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -102}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 68.017944, y: -108.39484}
+  m_SizeDelta: {x: 296.0359, y: 42.7898}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &536260092
 MonoBehaviour:
@@ -3352,13 +3350,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6cd5d11852b6314dbdd8a2f937dd5f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Luminaria
-  nomeIntelectual: Taylor Swift
-  biografia: "Taylor Swift \xE9 uma cantora e compositora norte-americana, nascida
-    em\r\n13 de dezembro de 1989, em Reading, Pensilv\xE2nia. Ela iniciou sua carreira\r\nna
-    m\xFAsica country ainda adolescente e posteriormente passou a explorar\r\ndiferentes
-    estilos musicais, principalmente o pop. Ao longo de sua\r\ncarreira, destacou-se
-    tamb\xE9m pela composi\xE7\xE3o de suas pr\xF3prias m\xFAsicas.\r\nSeu trabalho
-    recebeu diversos pr\xEAmios e reconhecimentos, incluindo\r\nv\xE1rios Grammys."
+  nomeIntelectual: J. Edgar Ferreira Barbosa
+  biografia: "Historiador, jornalista e professor. Pesquisou e preservou a hist\xF3ria
+    de Cear\xE1-Mirim, sendo homenageado com seu nome em um bairro e em uma escola
+    estadual."
   controleLuminarias: {fileID: 1976160487}
 --- !u!61 &547948802
 BoxCollider2D:
@@ -3577,8 +3572,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -70, y: 64}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0, y: 84}
+  m_SizeDelta: {x: 521.9325, y: 89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &585246070
 MonoBehaviour:
@@ -3600,9 +3595,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Quem foi Paulo Freire?
-
-'
+  m_text: "\"Conforme a biografia de Maria Madalena Antunes Pereira, qual \xE9 o
+    nome do livro de mem\xF3rias publicado por ela em 1958 e em qual engenho ela
+    nasceu?\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3629,8 +3624,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3972,8 +3967,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Luminaria
   nomeIntelectual: Paulo Freire
-  biografia: "Paulo Freire foi um educador e fil\xF3sofo brasileiro,\r\nconhecido
-    por suas importantes contribui\xE7\xF5es para a educa\xE7\xE3o."
+  biografia: "Escritora nascida no Engenho Oiteiro, em Cear\xE1-Mirim. Autora da
+    obra \"Oiteiro - Mem\xF3rias de uma sinh\xE1-mo\xE7a\" (1958), retratou a vida
+    nos engenhos e a educa\xE7\xE3o feminina da \xE9poca"
   controleLuminarias: {fileID: 1976160487}
 --- !u!1 &663471862
 GameObject:
@@ -4088,8 +4084,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 41.0385, y: -5.6526}
+  m_SizeDelta: {x: 242.0769, y: 41.3053}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &674037010
 MonoBehaviour:
@@ -4232,8 +4228,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -194, y: 64}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 34.746372, y: 73}
+  m_SizeDelta: {x: 657.4929, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &694686540
 MonoBehaviour:
@@ -4255,7 +4251,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Em qual pa\xEDs Justin Bieber nasceu?"
+  m_text: "\"Ad\xE9lia de Oliveira escreveu poemas e cr\xF4nicas para jornais da
+    \xE9poca usando qual pseud\xF4nimo?\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4282,8 +4279,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 33
+  m_fontSizeBase: 33
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4725,7 +4722,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sim
+  m_text: "Construindo uma est\xE1tua de ouro na pra\xE7a central"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4752,8 +4749,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5154,7 +5151,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ator
+  m_text: A Vida no Canavial, nascida no Engenho Verde-Nasce
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5181,8 +5178,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5424,7 +5421,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Canad\xE1"
+  m_text: "Sinh\xE1-Mo\xE7a"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5747,13 +5744,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6cd5d11852b6314dbdd8a2f937dd5f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Luminaria
-  nomeIntelectual: Justin Bieber
-  biografia: "Justin Bieber \xE9 um cantor canadense nascido em 1\xBA de mar\xE7o
-    de 1994,\r\nem London, Ont\xE1rio. Ele ganhou destaque ainda adolescente ap\xF3s
-    seus\r\nv\xEDdeos musicais publicados na internet chamarem aten\xE7\xE3o do p\xFAblico.\r\nEm
-    2009, lan\xE7ou o EP My World e, em 2010, seu primeiro \xE1lbum de est\xFAdio,\r\nMy
-    World 2.0. Ao longo da carreira, tornou-se um dos artistas pop mais\r\nconhecidos
-    mundialmente, com m\xFAsicas que alcan\xE7aram grande sucesso."
+  nomeIntelectual: "Ad\xE9lia (Adelle) de Oliveira (1884\u20131969)"
+  biografia: "Educadora, poetisa e jornalista em Cear\xE1-Mirim. Escreveu cr\xF4nicas
+    e poemas para jornais sob o pseud\xF4nimo \"H\xE9lade\" e tornou-se patrona da
+    Academia Cear\xE1-mirinense de Letras."
   controleLuminarias: {fileID: 1976160487}
 --- !u!61 &1046430679
 BoxCollider2D:
@@ -5955,7 +5949,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1048438377
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6299,7 +6293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1066640948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6467,12 +6461,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6cd5d11852b6314dbdd8a2f937dd5f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Luminaria
-  nomeIntelectual: Olivia Rodrigo
-  biografia: "Olivia Rodrigo \xE9 uma cantora, compositora e atriz norte-americana.\r\nEla
-    ganhou grande destaque em 2021 com a m\xFAsica \"drivers license\",\r\nque impulsionou
-    sua carreira musical. Seu primeiro \xE1lbum, SOUR, teve\r\ngrande sucesso e recebeu
-    reconhecimento no Grammy Awards. Em seguida, ela lan\xE7ou GUTS, mostrando uma
-    sonoridade com influ\xEAncias de pop e rock."
+  nomeIntelectual: Etelvina Antunes de Lemos
+  biografia: "Poetisa e professora cearamirinense. Irm\xE3 de Maria Madalena e Juvenal
+    Antunes, destacou-se na alfabetiza\xE7\xE3o e no registro das tradi\xE7\xF5es
+    locais."
   controleLuminarias: {fileID: 1976160487}
 --- !u!61 &1067651843
 BoxCollider2D:
@@ -6687,8 +6679,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 6.9353, y: 0}
+  m_SizeDelta: {x: 13.8705, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1141372332
 MonoBehaviour:
@@ -6710,9 +6702,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Educador
-
-'
+  m_text: "Mem\xF3rias do Vale, nascida no Engenho Guapor\xE9"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6739,8 +6729,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6826,8 +6816,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.000022888, y: 0.0000071526}
+  m_SizeDelta: {x: 25.0301, y: 9.8193}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1208923839
 MonoBehaviour:
@@ -6849,7 +6839,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bla
+  m_text: ' De Maria Madalena Antunes Pereira e do poeta Juvenal'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6876,8 +6866,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7396,8 +7386,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 38.113403, y: -3.46}
+  m_SizeDelta: {x: 236.2268, y: 36.9199}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1342365732
 MonoBehaviour:
@@ -7948,8 +7938,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11, y: 64}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 307.302, y: 64}
+  m_SizeDelta: {x: 792.604, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1382036839
 MonoBehaviour:
@@ -7971,7 +7961,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ela \xE9 loira?"
+  m_text: "Como a cidade de Cear\xE1-Mirim homenageou o historiador J. Edgar Ferreira
+    Barbosa por seus trabalhos de preserva\xE7\xE3o da mem\xF3ria local?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7998,8 +7989,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8379,7 +8370,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: EUA
+  m_text: "H\xE9lade"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8653,7 +8644,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "N\xE3o"
+  m_text: 'Batizando um bairro e uma escola estadual com o seu nome '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8680,8 +8671,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8849,8 +8840,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -49}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 41.038, y: -54.12976}
+  m_SizeDelta: {x: 242.08, y: 40.2596}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1584944468
 MonoBehaviour:
@@ -9235,7 +9226,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Love
+  m_text: De Nilo Pereira e J. Edgar Ferreira Barbosa
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9262,8 +9253,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9505,7 +9496,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Rosa
+  m_text: "Dando o seu nome ao principal engenho de a\xE7\xFAcar do munic\xEDpio"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9532,8 +9523,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9619,8 +9610,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -286, y: 95}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -254.76111, y: 95}
+  m_SizeDelta: {x: 262.4778, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1764932056
 MonoBehaviour:
@@ -9642,8 +9633,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Paulo Freire foi um educador e fil\xF3sofo brasileiro,\r\nconhecido por
-    suas contribui\xE7\xF5es para a educa\xE7\xE3o."
+  m_text: "Escritora nascida no Engenho Oiteiro, em Cear\xE1-Mirim. Autora da obra
+    \"Oiteiro - Mem\xF3rias de uma sinh\xE1-mo\xE7a\" (1958), retratou a vida nos
+    engenhos e a educa\xE7\xE3o feminina da \xE9poca"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9760,8 +9752,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -49}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 38.113, y: -52.02002}
+  m_SizeDelta: {x: 236.23, y: 36.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1797629127
 MonoBehaviour:
@@ -9889,7 +9881,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1803597353
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10030,8 +10022,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -49}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 72.766, y: -54.232178}
+  m_SizeDelta: {x: 305.53, y: 40.4643}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1808271907
 MonoBehaviour:
@@ -10174,8 +10166,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -286, y: 162}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -47.889893, y: 162}
+  m_SizeDelta: {x: 676.2203, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1876828237
 MonoBehaviour:
@@ -10197,9 +10189,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Paulo Freire
-
-'
+  m_text: "Maria Madalena Antunes Pereira (1880\u20131959)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10586,8 +10576,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -102}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 41.038, y: -111.61841}
+  m_SizeDelta: {x: 242.08, y: 49.2368}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1971831748
 MonoBehaviour:
@@ -11085,7 +11075,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2052131576
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11473,7 +11463,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bla
+  m_text: "Do Bar\xE3o de Cear\xE1-Mirim e do Dr. Celso Cicco"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11500,8 +11490,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
