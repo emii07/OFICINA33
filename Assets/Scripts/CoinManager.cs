@@ -20,6 +20,7 @@ public class CoinManager : MonoBehaviour
 
             // Inicia uma nova partida com zero moedas
             totalMoedas = 0;
+
             PlayerPrefs.SetInt("TotalMoedas", 0);
             PlayerPrefs.Save();
         }
