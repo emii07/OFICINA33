@@ -1102,7 +1102,7 @@ GameObject:
   - component: {fileID: 748315208}
   - component: {fileID: 748315207}
   m_Layer: 0
-  m_Name: Guardiao
+  m_Name: Bibliotecaria
   m_TagString: Guardiao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1169,17 +1169,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.058463752, y: -0.04394722}
+  m_Offset: {x: 0.013881922, y: -0.04394722}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.72, y: 4.55}
+    oldSize: {x: 1.26, y: 3.74}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.4555516, y: 4.1797504}
+  m_Size: {x: 1.2561445, y: 4.1797504}
   m_EdgeRadius: 0
 --- !u!114 &748315209
 MonoBehaviour:
@@ -1244,7 +1244,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 8909413382240975105, guid: ec6bbdfbdb0b8e14abe336b0a0742303, type: 3}
+  m_Sprite: {fileID: -8015089544698169912, guid: 5111e00da4d870f478006b2be380fb7d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1264,8 +1264,8 @@ Transform:
   m_GameObject: {fileID: 748315206}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1393.8, y: 436, z: 0}
-  m_LocalScale: {x: 23.105299, y: 27.962175, z: 0.35981706}
+  m_LocalPosition: {x: 1402.9568, y: 540, z: 0}
+  m_LocalScale: {x: 76.07079, y: 84.459946, z: 1.08683}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
