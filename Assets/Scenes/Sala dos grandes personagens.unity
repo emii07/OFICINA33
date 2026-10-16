@@ -499,7 +499,7 @@ Transform:
   m_GameObject: {fileID: 137404108}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 615, y: 34, z: 0}
+  m_LocalPosition: {x: -1011, y: 34, z: 0}
   m_LocalScale: {x: 44.92388, y: 45.647194, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -531,7 +531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7535582377165420017, guid: bd190254fb99a594d9138c245967e8c3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -231.09247
+      value: -266
       objectReference: {fileID: 0}
     - target: {fileID: 7535582377165420017, guid: bd190254fb99a594d9138c245967e8c3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -942,6 +942,54 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.92, y: 5.53}
   m_EdgeRadius: 0
+--- !u!1 &225284533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 225284535}
+  - component: {fileID: 225284534}
+  m_Layer: 0
+  m_Name: gerenciadorVitoria
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &225284534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225284533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f13bd7e75caf0a42882189f74e95008, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PainelVitoria
+  painelVitoria: {fileID: 1536885860}
+  estatuas:
+  - {fileID: 861347471}
+  jogador: {fileID: 1426515253}
+--- !u!4 &225284535
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225284533}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -40.37568, y: 171.14873, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &258061886
 GameObject:
   m_ObjectHideFlags: 0
@@ -2249,7 +2297,7 @@ Transform:
   m_GameObject: {fileID: 624943927}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 722, y: 33, z: 0}
+  m_LocalPosition: {x: -827, y: 33, z: 0}
   m_LocalScale: {x: 44.92388, y: 45.647194, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3085,7 +3133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5243888676801497245, guid: 77c0a7ed742f61a4aba05bcc15fd1eb1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -35
       objectReference: {fileID: 0}
     - target: {fileID: 5243888676801497245, guid: 77c0a7ed742f61a4aba05bcc15fd1eb1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3780,7 +3828,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1447812925}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 225284534}
+        m_TargetAssemblyTypeName: PainelVitoria, Assembly-CSharp
+        m_MethodName: FecharPainel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1447812925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5754,3 +5814,4 @@ SceneRoots:
   - {fileID: 624943932}
   - {fileID: 137404113}
   - {fileID: 2107818417}
+  - {fileID: 225284535}
