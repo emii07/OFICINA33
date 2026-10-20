@@ -269,7 +269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &276420732
 RectTransform:
   m_ObjectHideFlags: 0
@@ -347,7 +347,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &283111230
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2024,8 +2024,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0dfd2220f9428a4198fe22a1c868004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuPrincipal
-  painelMenu: {fileID: 283111229}
-  painelConfiguracoes: {fileID: 276420731}
 --- !u!4 &1893182764
 Transform:
   m_ObjectHideFlags: 0
