@@ -4469,51 +4469,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 694686538}
   m_CullTransparentMesh: 1
---- !u!1 &720984707
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 720984709}
-  - component: {fileID: 720984708}
-  m_Layer: 0
-  m_Name: CoinManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &720984708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 720984707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cc166e1fc7bd104e84d4b0bf4fb8b79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CoinManager
-  totalMoedas: 0
---- !u!4 &720984709
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 720984707}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 238.5979, y: 943.2787, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &779958925
 GameObject:
   m_ObjectHideFlags: 0
@@ -5494,7 +5449,7 @@ Transform:
   m_GameObject: {fileID: 991607166}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.8725586, y: -7.260681, z: 10}
+  m_LocalPosition: {x: -4, y: 31, z: 10}
   m_LocalScale: {x: 50.556, y: 50.556, z: 50.556}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10017,7 +9972,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1803597353
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11771,4 +11726,3 @@ SceneRoots:
   - {fileID: 1528197971}
   - {fileID: 286712561}
   - {fileID: 1976160485}
-  - {fileID: 720984709}

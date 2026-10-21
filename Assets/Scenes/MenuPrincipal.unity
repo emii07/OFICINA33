@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea248d5b9f938a94682057132f14ccc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuManager
-  nomeDaCenaDoJogo: Jogo
+  nomeDaCenaDoJogo: "introdu\xE7\xE3o da historia"
   painelConfiguracoes: {fileID: 1488111830}
   painelCreditos: {fileID: 9808010}
 --- !u!4 &6368121

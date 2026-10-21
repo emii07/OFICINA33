@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuPrincipal.unity
     guid: c10ac8ecc4ece66408851ddb5d7c00d5
   - enabled: 1
+    path: "Assets/Scenes/introdu\xE7\xE3o da historia.unity"
+    guid: 2072507b2b60b5b42b925611bb9158fc
+  - enabled: 1
     path: Assets/Scenes/Jogo.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
