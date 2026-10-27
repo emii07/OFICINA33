@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b6388d51daf1ee944ba7d96606a19db2
+guid: ee663332e1fe7f7458016a2c02b26393
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4567298598502439368
-    second: pergaminho_0
+      213: 2020393532684908586
+    second: rio sem maquina (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -178,13 +178,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pergaminho_0
+      name: rio sem maquina (1)_0
       rect:
         serializedVersion: 2
-        x: 37
-        y: 58
-        width: 719
-        height: 691
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,8 +193,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c990e270ed426f30800000000000000
-      internalID: 4567298598502439368
+      spriteID: a283e26a631e90c10800000000000000
+      internalID: 2020393532684908586
       vertices: []
       indices: 
       edges: []
@@ -213,7 +213,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pergaminho_0: 4567298598502439368
+      rio sem maquina (1)_0: 2020393532684908586
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

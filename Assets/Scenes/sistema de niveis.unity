@@ -1593,6 +1593,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: seta
       objectReference: {fileID: 0}
+    - target: {fileID: 1496121059837601557, guid: ad3c4417970d1f44b84e881d4fae48a2, type: 3}
+      propertyPath: velocidade
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5665726363227359053, guid: ad3c4417970d1f44b84e881d4fae48a2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1655,11 +1659,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5665726363227359053, guid: ad3c4417970d1f44b84e881d4fae48a2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 336
+      value: 274.2
       objectReference: {fileID: 0}
     - target: {fileID: 5665726363227359053, guid: ad3c4417970d1f44b84e881d4fae48a2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 111
+      value: 84.1
       objectReference: {fileID: 0}
     - target: {fileID: 5665726363227359053, guid: ad3c4417970d1f44b84e881d4fae48a2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
