@@ -10,6 +10,7 @@ TagManager:
   - Maquina
   - coletavel
   - Coletavel
+  - "Lumin\xE1rias"
   layers:
   - Default
   - TransparentFX

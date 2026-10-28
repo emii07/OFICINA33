@@ -33,6 +33,16 @@ public class BiografiaUI : MonoBehaviour
         painelBiografia.SetActive(true);
     }
 
+    // Apenas oculta o painel visualmente ao se afastar da luminária
+    public void EsconderBiografia()
+    {
+        if (painelBiografia != null)
+        {
+            painelBiografia.SetActive(false);
+        }
+    }
+
+    // Mantido para quando o jogador fechar manualmente e quiser liberar o questionário
     public void FecharBiografia()
     {
         painelBiografia.SetActive(false);

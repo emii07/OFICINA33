@@ -10,20 +10,49 @@ public class Luminaria : MonoBehaviour
 
     [SerializeField] private ControleLuminarias controleLuminarias;
 
+    [Header("Configuração Especial (Luminária 4)")]
+    [SerializeField] private bool ativaBotaoQuestionario = false;
+    [SerializeField] private GameObject botaoQuestionario;
+
     private bool jaFoiAtivada = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && !jaFoiAtivada)
+        if (other.CompareTag("Player"))
         {
-            jaFoiAtivada = true;
+            if (!jaFoiAtivada)
+            {
+                jaFoiAtivada = true;
 
-            BiografiaUI.Instance.MostrarBiografia(
-                nomeIntelectual,
-                biografia
-            );
+                if (controleLuminarias != null)
+                {
+                    controleLuminarias.RegistrarLuminaria();
+                }
+            }
 
-            controleLuminarias.RegistrarLuminaria();
+            if (BiografiaUI.Instance != null)
+            {
+                BiografiaUI.Instance.MostrarBiografia(nomeIntelectual, biografia);
+            }
+            
+            // A ativação do botão foi removida daqui
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            if (BiografiaUI.Instance != null)
+            {
+                BiografiaUI.Instance.EsconderBiografia();
+            }
+
+            // O botão agora só é ativado quando o jogador sai da área e o painel fecha
+            if (ativaBotaoQuestionario && botaoQuestionario != null)
+            {
+                botaoQuestionario.SetActive(true);
+            }
         }
     }
 }
