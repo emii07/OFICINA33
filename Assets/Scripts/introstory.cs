@@ -6,10 +6,11 @@ public class IntroStoryManager : MonoBehaviour
 {
     [Header("Componentes de UI")]
     [SerializeField] private GameObject painelHistoria;
-    [SerializeField] private TMP_Text campoTextoHistoria; // Se usar UI Text tradicional, mude TMP_Text para Text
+    [SerializeField] private GameObject botaoConhecerHistoria; // Arraste o botão para cá no Inspector
+    [SerializeField] private TMP_Text campoTextoHistoria;
 
     [Header("Páginas da História")]
-    [TextArea(3, 6)] // Cria uma caixa de texto maior no Inspector
+    [TextArea(3, 6)]
     [SerializeField] private string[] paginasTexto;
 
     [Header("Opcional: Avançar de Cena")]
@@ -22,6 +23,13 @@ public class IntroStoryManager : MonoBehaviour
     public void AbrirHistoria()
     {
         painelHistoria.SetActive(true);
+
+        // Esconde o botão "Conhecer História"
+        if (botaoConhecerHistoria != null)
+        {
+            botaoConhecerHistoria.SetActive(false);
+        }
+
         indiceAtual = 0;
         ExibirPaginaAtual();
     }

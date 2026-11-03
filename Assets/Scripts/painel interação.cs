@@ -1,16 +1,16 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement; // Necessário se for mudar de cena no "Viajar"
+using UnityEngine.SceneManagement;
 
-public class DialogoPainel : MonoBehaviour
+public class PainelInteracao : MonoBehaviour
 {
     [Header("Componentes de UI")]
     [SerializeField] private TMP_Text campoTextoDialogo;
-    [SerializeField] private TMP_Text textoDoBotao; // O componente Text (TMP) de dentro do botão
+    [SerializeField] private TMP_Text textoDoBotao;
 
     [Header("Configuração da Viagem")]
-    [SerializeField] private string nomeDaCenaDestino = "NomeDaSuaCena"; // Digite o nome da cena para onde o jogador vai
+    [SerializeField] private string nomeDaCenaDestino = "NomeDaSuaCena";
 
     [Header("Conteúdo da Fala")]
     [TextArea(2, 4)]
@@ -24,46 +24,53 @@ public class DialogoPainel : MonoBehaviour
 
     private void OnEnable()
     {
-        // Reseta para a primeira fala e ajusta o botão sempre que o painel abrir
         indiceAtual = 0;
         AtualizarInterface();
     }
 
-    // Função ÚNICA para conectar ao On Click () do botão
     public void CliqueDoBotao()
     {
-        // Se ainda NÃO for a última fala, avança para o próximo texto
-        if (indiceAtual < falas.Length - 1)
+        if (falas != null && indiceAtual < falas.Length - 1)
         {
             indiceAtual++;
             AtualizarInterface();
         }
         else
         {
-            // Se JÁ estiver na última fala, executa a ação de viajar
             ExecutarViagem();
         }
     }
 
-    private void AtualizarInterface()
+    public void AtualizarInterface()
     {
-        // Atualiza o texto do balão
-        campoTextoDialogo.text = falas[indiceAtual];
+        if (falas != null && falas.Length > 0 && indiceAtual < falas.Length)
+        {
+            if (campoTextoDialogo != null)
+            {
+                campoTextoDialogo.text = falas[indiceAtual];
+            }
 
-        // Mudar a palavra no botão dependendo da etapa
-        if (indiceAtual < falas.Length - 1)
-        {
-            textoDoBotao.text = "Continuar";
-        }
-        else
-        {
-            textoDoBotao.text = "Viajar";
+            if (textoDoBotao != null)
+            {
+                if (indiceAtual < falas.Length - 1)
+                {
+                    textoDoBotao.text = "Continuar";
+                }
+                else
+                {
+                    textoDoBotao.text = "Viajar";
+                }
+            }
         }
     }
 
     private void ExecutarViagem()
     {
-        // Carrega a nova cena do jogo ao clicar em "Viajar"
-        SceneManager.LoadScene(nomeDaCenaDestino);
+        Time.timeScale = 1f;
+
+        if (!string.IsNullOrEmpty(nomeDaCenaDestino))
+        {
+            SceneManager.LoadScene(nomeDaCenaDestino);
+        }
     }
 }

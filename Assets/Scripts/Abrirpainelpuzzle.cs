@@ -20,10 +20,26 @@ public class AbrirPainelArquivo : MonoBehaviour
         // Verifica se quem colidiu foi o jogador
         if (collision.CompareTag("Player"))
         {
-            if (painelArquivo != null)
-            {
-                painelArquivo.SetActive(true);
-            }
+            AbrirPainel();
         }
+    }
+
+    public void AbrirPainel()
+    {
+        if (painelArquivo != null)
+        {
+            painelArquivo.SetActive(true);
+            Time.timeScale = 0f; // Pausa a movimentação e a física do jogo
+        }
+    }
+
+    // Chame este método no evento On Click () do botão de fechar o painel
+    public void FecharPainel()
+    {
+        if (painelArquivo != null)
+        {
+            painelArquivo.SetActive(false);
+        }
+        Time.timeScale = 1f; // Reativa a movimentação da personagem
     }
 }

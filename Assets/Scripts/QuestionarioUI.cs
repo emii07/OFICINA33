@@ -1,6 +1,7 @@
 using UnityEngine;
+using UnityEngine.SceneManagement; // Necessário para trocar de cena
 using TMPro;
-using System.Collections; // Necessário para usar Corrotinas (tempo de espera)
+using System.Collections;
 
 public class QuestionarioUI : MonoBehaviour
 {
@@ -16,7 +17,16 @@ public class QuestionarioUI : MonoBehaviour
     [Header("Resultado Final")]
     [SerializeField] private TMP_Text textoPontuacao;
     [SerializeField] private GameObject botaoContinuar;
-    // Removi a variável do Botão Finalizar daqui, pois já não vamos usar
+
+    [Header("Painel do Fragmento Recuperado")]
+    [Tooltip("Arraste aqui o Painel (GameObject) completo com a foto e a mensagem")]
+    [SerializeField] private GameObject painelFragmento;
+    [Tooltip("Tempo em segundos que o painel do fragmento fica visível")]
+    [SerializeField] private float tempoExibicaoFragmento = 4f;
+
+    [Header("Navegação de Cena")]
+    [Tooltip("Índice da cena no Build Settings (ex: Nível 2 = 7)")]
+    [SerializeField] private int indiceProximaCena = 7;
 
     [Header("Conteúdos das Perguntas")]
     [SerializeField] private GameObject conteudoPergunta1;
@@ -24,7 +34,7 @@ public class QuestionarioUI : MonoBehaviour
     [SerializeField] private GameObject conteudoPergunta3;
     [SerializeField] private GameObject conteudoPergunta4;
 
-    private bool aguardandoFim = false; // Controla para não chamar o fim várias vezes
+    private bool aguardandoFim = false;
 
     private void Start()
     {
@@ -34,13 +44,13 @@ public class QuestionarioUI : MonoBehaviour
 
         if (textoPontuacao != null) textoPontuacao.gameObject.SetActive(false);
         if (botaoContinuar != null) botaoContinuar.SetActive(false);
+        if (painelFragmento != null) painelFragmento.SetActive(false);
 
         RespostaQuestionario.textoResultado = textoResultado;
     }
 
     private void Update()
     {
-        // Se o painel está aberto, se as 4 perguntas foram respondidas e ainda não começou a finalizar
         if (painelQuestionario.activeSelf && RespostaQuestionario.perguntasRespondidas >= 4 && !aguardandoFim)
         {
             if (textoPontuacao != null && !textoPontuacao.gameObject.activeSelf)
@@ -51,10 +61,8 @@ public class QuestionarioUI : MonoBehaviour
         }
     }
 
-    // Espera 1.5 segundos antes de mostrar a pontuação final
     private IEnumerator EsperarEFinalizar()
     {
-        // WaitForSecondsRealtime é usado porque o Time.timeScale está em 0 (jogo pausado)
         yield return new WaitForSecondsRealtime(1.5f);
         FinalizarQuestionario();
     }
@@ -64,12 +72,13 @@ public class QuestionarioUI : MonoBehaviour
         painelQuestionario.SetActive(true);
         Time.timeScale = 0f; 
         
-        aguardandoFim = false; // Reseta a verificação
+        aguardandoFim = false;
         RespostaQuestionario.acertos = 0;
         RespostaQuestionario.perguntasRespondidas = 0;
 
         if (textoPontuacao != null) textoPontuacao.gameObject.SetActive(false);
         if (botaoContinuar != null) botaoContinuar.SetActive(false);
+        if (painelFragmento != null) painelFragmento.SetActive(false);
 
         MostrarPergunta(1);
     }
@@ -107,6 +116,14 @@ public class QuestionarioUI : MonoBehaviour
         {
             botaoContinuar.SetActive(true);
         }
+
+        StartCoroutine(EsperarEFecharAutomatico());
+    }
+
+    private IEnumerator EsperarEFecharAutomatico()
+    {
+        yield return new WaitForSecondsRealtime(4f);
+        ContinuarJogo();
     }
 
     public void ContinuarJogo()
@@ -117,6 +134,31 @@ public class QuestionarioUI : MonoBehaviour
         if (botaoContinuar != null) botaoContinuar.SetActive(false);
         if (painelQuestionario != null) painelQuestionario.SetActive(false);
         if (botaoQuestionario != null) botaoQuestionario.SetActive(false);
+
+        if (painelFragmento != null)
+        {
+            StartCoroutine(ExibirPainelEAvancar());
+        }
+        else
+        {
+            CarregarProximaCena();
+        }
+    }
+
+    private IEnumerator ExibirPainelEAvancar()
+    {
+        painelFragmento.SetActive(true);
+
+        yield return new WaitForSecondsRealtime(tempoExibicaoFragmento);
+
+        painelFragmento.SetActive(false);
+        CarregarProximaCena();
+    }
+
+    public void CarregarProximaCena()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(indiceProximaCena);
     }
 
     public void EsconderResultado()
@@ -134,5 +176,11 @@ public class QuestionarioUI : MonoBehaviour
         conteudoPergunta2.SetActive(false);
         conteudoPergunta3.SetActive(false);
         conteudoPergunta4.SetActive(false);
+    }
+    // Função pública para ligar ao botão Continuar do Painel Fragmento
+    public void CarregarNivel2()
+    {
+        Time.timeScale = 1f; // Reativa o tempo do jogo
+        SceneManager.LoadScene(7); // Índice 7 é o 'nivel 2' no Build Settings
     }
 }

@@ -4,10 +4,8 @@ public class Luminaria : MonoBehaviour
 {
     [Header("Informações do intelectual")]
     [SerializeField] private string nomeIntelectual;
-
     [TextArea(3, 8)]
     [SerializeField] private string biografia;
-
     [SerializeField] private ControleLuminarias controleLuminarias;
 
     [Header("Configuração Especial (Luminária 4)")]
@@ -18,12 +16,12 @@ public class Luminaria : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // Verifica se quem entrou foi o jogador (usando a Tag "Player")
         if (other.CompareTag("Player"))
         {
             if (!jaFoiAtivada)
             {
                 jaFoiAtivada = true;
-
                 if (controleLuminarias != null)
                 {
                     controleLuminarias.RegistrarLuminaria();
@@ -34,8 +32,6 @@ public class Luminaria : MonoBehaviour
             {
                 BiografiaUI.Instance.MostrarBiografia(nomeIntelectual, biografia);
             }
-            
-            // A ativação do botão foi removida daqui
         }
     }
 
@@ -48,7 +44,6 @@ public class Luminaria : MonoBehaviour
                 BiografiaUI.Instance.EsconderBiografia();
             }
 
-            // O botão agora só é ativado quando o jogador sai da área e o painel fecha
             if (ativaBotaoQuestionario && botaoQuestionario != null)
             {
                 botaoQuestionario.SetActive(true);

@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections; // Necessário para usar Corrotinas (IEnumerator)
 using System.Collections.Generic;
-using TMPro; // Necessário para usar TextMeshPro
+using TMPro;
 
 public class PuzzlePergaminho : MonoBehaviour
 {
@@ -19,7 +20,15 @@ public class PuzzlePergaminho : MonoBehaviour
     [Tooltip("Arraste aqui o objeto de Texto ou Painel que contém a mensagem de vitória.")]
     public GameObject mensagemVitoria;
 
+    [Header("Painel do Fragmento (Pós-Vitória)")]
+    [Tooltip("Arraste aqui o Painel do Fragmento que deve aparecer após resolver o puzzle.")]
+    public GameObject painelFragmento;
+
+    [Tooltip("Tempo em segundos que a mensagem de vitória fica visível antes de abrir o fragmento.")]
+    public float tempoEsperaSegundos = 3f;
+
     private List<int> ordemAtual = new List<int> { 2, 0, 1 }; 
+    private bool jaResolveu = false; // Garante que a vitória só seja disparada uma vez
 
     void Start()
     {
@@ -28,8 +37,16 @@ public class PuzzlePergaminho : MonoBehaviour
 
     public void EmbaralharEAtualizar()
     {
+        jaResolveu = false;
         if (pergaminhoCompleto != null) pergaminhoCompleto.SetActive(false);
-        if (mensagemVitoria != null) mensagemVitoria.SetActive(false); // Esconde a mensagem no início
+        if (mensagemVitoria != null) mensagemVitoria.SetActive(false);
+        if (painelFragmento != null) painelFragmento.SetActive(false);
+
+        // Garante que as tiras voltem a ficar visíveis
+        foreach (Image img in imagemTiras)
+        {
+            if (img != null) img.gameObject.SetActive(true);
+        }
 
         ordemAtual = new List<int> { 2, 0, 1 }; 
         AtualizarVisual();
@@ -43,6 +60,8 @@ public class PuzzlePergaminho : MonoBehaviour
 
     public void MoverTira(int posicao, int direcao)
     {
+        if (jaResolveu) return; // Impede movimentação após resolver
+
         int novaPosicao = posicao + direcao;
 
         if (novaPosicao < 0 || novaPosicao >= ordemAtual.Count) return;
@@ -72,8 +91,9 @@ public class PuzzlePergaminho : MonoBehaviour
 
     void VerificarVitoria()
     {
-        if (ordemAtual[0] == 0 && ordemAtual[1] == 1 && ordemAtual[2] == 2)
+        if (ordemAtual[0] == 0 && ordemAtual[1] == 1 && ordemAtual[2] == 2 && !jaResolveu)
         {
+            jaResolveu = true;
             Debug.Log("Puzzle Resolvido! O Pergaminho foi restaurado.");
 
             // Esconde as tiras
@@ -93,12 +113,29 @@ public class PuzzlePergaminho : MonoBehaviour
             {
                 mensagemVitoria.SetActive(true);
             }
+
+            // Inicia a contagem regressiva para fechar este painel e abrir o do fragmento
+            StartCoroutine(AguardarEExibirFragmento());
         }
     }
-    
+
+    private IEnumerator AguardarEExibirFragmento()
+    {
+        // Usa Realtime para funcionar mesmo se o Time.timeScale estiver zerado (jogo pausado)
+        yield return new WaitForSecondsRealtime(tempoEsperaSegundos);
+
+        // Abre o painel do fragmento se estiver atribuído
+        if (painelFragmento != null)
+        {
+            painelFragmento.SetActive(true);
+        }
+
+        // Fecha o painel do puzzle atual
+        FecharPainel();
+    }
+
     public void FecharPainel()
     {
-        // Desativa o painel onde todo o puzzle está contido
         gameObject.SetActive(false);
     }
 }
