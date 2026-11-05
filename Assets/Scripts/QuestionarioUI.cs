@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; // Necessário para trocar de cena
+using UnityEngine.SceneManagement; // Mantido para quando for utilizar funções de cena
 using TMPro;
 using System.Collections;
 
@@ -128,6 +128,7 @@ public class QuestionarioUI : MonoBehaviour
 
     public void ContinuarJogo()
     {
+        // Reativa a velocidade normal do jogo para que a personagem volte a andar
         Time.timeScale = 1f;
 
         if (textoPontuacao != null) textoPontuacao.gameObject.SetActive(false);
@@ -135,24 +136,22 @@ public class QuestionarioUI : MonoBehaviour
         if (painelQuestionario != null) painelQuestionario.SetActive(false);
         if (botaoQuestionario != null) botaoQuestionario.SetActive(false);
 
+        // Se houver painel do fragmento, exibe e depois mantém a personagem na cena
         if (painelFragmento != null)
         {
-            StartCoroutine(ExibirPainelEAvancar());
-        }
-        else
-        {
-            CarregarProximaCena();
+            StartCoroutine(ExibirPainelEContinuarNaCena());
         }
     }
 
-    private IEnumerator ExibirPainelEAvancar()
+    private IEnumerator ExibirPainelEContinuarNaCena()
     {
         painelFragmento.SetActive(true);
 
+        // Aguarda os segundos configurados
         yield return new WaitForSecondsRealtime(tempoExibicaoFragmento);
 
+        // Apenas oculta o painel do fragmento sem carregar outra cena
         painelFragmento.SetActive(false);
-        CarregarProximaCena();
     }
 
     public void CarregarProximaCena()
@@ -177,10 +176,10 @@ public class QuestionarioUI : MonoBehaviour
         conteudoPergunta3.SetActive(false);
         conteudoPergunta4.SetActive(false);
     }
-    // Função pública para ligar ao botão Continuar do Painel Fragmento
+
     public void CarregarNivel2()
     {
-        Time.timeScale = 1f; // Reativa o tempo do jogo
-        SceneManager.LoadScene(7); // Índice 7 é o 'nivel 2' no Build Settings
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(7);
     }
 }

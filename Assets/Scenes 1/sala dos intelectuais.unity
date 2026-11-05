@@ -4681,7 +4681,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &668810239
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11330,18 +11330,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2577e3ca1f073ea4da876488bb2d7f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzlePergaminho
-  imagemTiras:
-  - {fileID: 1768370540}
-  - {fileID: 925302561}
-  - {fileID: 1325597427}
-  spritesCorretos:
-  - {fileID: -1867918026181634234, guid: 643ce9402d7242a4fa4fcb9405e7567b, type: 3}
-  - {fileID: 703871655794321466, guid: 776c96086b6b3e646bf504f481a8d84b, type: 3}
-  - {fileID: 6274622146931324466, guid: 3b8052b9877b1fb4f882f171989cd6dc, type: 3}
-  pergaminhoCompleto: {fileID: 1587546088}
-  mensagemVitoria: {fileID: 1438930906}
-  painelFragmento: {fileID: 59563176}
-  tempoEsperaSegundos: 3
+  pecas:
+  - pecaTransform: {fileID: 0}
+    posicaoCorreta: {x: 0, y: 0}
+    tolerancia: 0
+  - pecaTransform: {fileID: 0}
+    posicaoCorreta: {x: 0, y: 0}
+    tolerancia: 0
+  - pecaTransform: {fileID: 0}
+    posicaoCorreta: {x: 0, y: 0}
+    tolerancia: 0
+  painelPergaminho: {fileID: 0}
+  painelFragmento1: {fileID: 0}
+  passoMovimento: 50
+  tempoExibicaoFragmento: 4
 --- !u!1 &1768370539
 GameObject:
   m_ObjectHideFlags: 0

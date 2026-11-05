@@ -1,141 +1,147 @@
 using UnityEngine;
-using UnityEngine.UI;
-using System.Collections; // Necessário para usar Corrotinas (IEnumerator)
-using System.Collections.Generic;
-using TMPro;
+using System.Collections;
 
 public class PuzzlePergaminho : MonoBehaviour
 {
-    [Header("Tiras do Puzzle")]
-    [Tooltip("Arraste os 3 componentes Image das tiras (Esquerda, Meio, Direita).")]
-    public Image[] imagemTiras = new Image[3];
-
-    [Tooltip("Arraste os 3 Sprites das tiras na ORDEM CORRETA do pergaminho.")]
-    public Sprite[] spritesCorretos = new Sprite[3];
-
-    [Header("Resultado")]
-    [Tooltip("Objeto da imagem do pergaminho montado/brilhando.")]
-    public GameObject pergaminhoCompleto;
-
-    [Tooltip("Arraste aqui o objeto de Texto ou Painel que contém a mensagem de vitória.")]
-    public GameObject mensagemVitoria;
-
-    [Header("Painel do Fragmento (Pós-Vitória)")]
-    [Tooltip("Arraste aqui o Painel do Fragmento que deve aparecer após resolver o puzzle.")]
-    public GameObject painelFragmento;
-
-    [Tooltip("Tempo em segundos que a mensagem de vitória fica visível antes de abrir o fragmento.")]
-    public float tempoEsperaSegundos = 3f;
-
-    private List<int> ordemAtual = new List<int> { 2, 0, 1 }; 
-    private bool jaResolveu = false; // Garante que a vitória só seja disparada uma vez
-
-    void Start()
+    [System.Serializable]
+    public class PecaPergaminho
     {
-        EmbaralharEAtualizar();
+        public RectTransform pecaTransform; // O RectTransform da peça da UI
+        public Vector2 posicaoCorreta;      // Posição AnchoredPosition correta no Canvas
+        public float tolerancia = 10f;       // Margem de erro em pixels para validar
     }
 
-    public void EmbaralharEAtualizar()
-    {
-        jaResolveu = false;
-        if (pergaminhoCompleto != null) pergaminhoCompleto.SetActive(false);
-        if (mensagemVitoria != null) mensagemVitoria.SetActive(false);
-        if (painelFragmento != null) painelFragmento.SetActive(false);
+    [Header("Peças do Puzzle")]
+    [SerializeField] private PecaPergaminho[] pecas;
 
-        // Garante que as tiras voltem a ficar visíveis
-        foreach (Image img in imagemTiras)
+    [Header("Painéis de UI")]
+    [Tooltip("Arraste aqui o GameObject do Painel do Pergaminho/Arquivo")]
+    [SerializeField] private GameObject painelPergaminho;
+
+    [Tooltip("Arraste aqui o GameObject do Painel 'Fragmento 1 Recuperado'")]
+    [SerializeField] private GameObject painelFragmento1;
+
+    [Header("Configurações do Puzzle")]
+    [SerializeField] private float passoMovimento = 50f; // Distância que a peça anda por clique
+    [SerializeField] private float tempoExibicaoFragmento = 4f;
+
+    private int pecaSelecionadaIndex = 0;
+    private bool puzzleConcluido = false;
+
+    private void OnEnable()
+    {
+        puzzleConcluido = false;
+    }
+
+    // --- MÉTODOS DAS SETAS DE MOVIMENTAÇÃO ---
+
+    // Conecte este método no botão da Seta para a Esquerda
+    public void MoverEsquerda()
+    {
+        MoverPecaAtual(new Vector2(-passoMovimento, 0));
+    }
+
+    // Conecte este método no botão da Seta para a Direita
+    public void MoverDireita()
+    {
+        MoverPecaAtual(new Vector2(passoMovimento, 0));
+    }
+
+    // Conecte este método no botão da Seta para Cima
+    public void MoverCima()
+    {
+        MoverPecaAtual(new Vector2(0, passoMovimento));
+    }
+
+    // Conecte este método no botão da Seta para Baixo
+    public void MoverBaixo()
+    {
+        MoverPecaAtual(new Vector2(0, -passoMovimento));
+    }
+
+    // Define qual peça as setas vão mover (chame ao clicar na peça correspondente)
+    public void SelecionarPeca(int index)
+    {
+        if (index >= 0 && index < pecas.Length)
         {
-            if (img != null) img.gameObject.SetActive(true);
-        }
-
-        ordemAtual = new List<int> { 2, 0, 1 }; 
-        AtualizarVisual();
-    }
-
-    // --- FUNÇÕES PARA OS BOTÕES DE SETA ---
-    public void MoverTira0ParaDireita() { MoverTira(0, 1); }
-    public void MoverTira1ParaEsquerda() { MoverTira(1, -1); }
-    public void MoverTira1ParaDireita() { MoverTira(1, 1); }
-    public void MoverTira2ParaEsquerda() { MoverTira(2, -1); }
-
-    public void MoverTira(int posicao, int direcao)
-    {
-        if (jaResolveu) return; // Impede movimentação após resolver
-
-        int novaPosicao = posicao + direcao;
-
-        if (novaPosicao < 0 || novaPosicao >= ordemAtual.Count) return;
-
-        int temp = ordemAtual[posicao];
-        ordemAtual[posicao] = ordemAtual[novaPosicao];
-        ordemAtual[novaPosicao] = temp;
-
-        AtualizarVisual();
-        VerificarVitoria();
-    }
-
-    void AtualizarVisual()
-    {
-        for (int i = 0; i < imagemTiras.Length; i++)
-        {
-            if (imagemTiras[i] != null && i < spritesCorretos.Length)
-            {
-                int idSprite = ordemAtual[i];
-                if (spritesCorretos[idSprite] != null)
-                {
-                    imagemTiras[i].sprite = spritesCorretos[idSprite];
-                }
-            }
+            pecaSelecionadaIndex = index;
         }
     }
 
-    void VerificarVitoria()
+    private void MoverPecaAtual(Vector2 deslocamento)
     {
-        if (ordemAtual[0] == 0 && ordemAtual[1] == 1 && ordemAtual[2] == 2 && !jaResolveu)
+        if (puzzleConcluido || pecas == null || pecas.Length == 0) return;
+
+        PecaPergaminho peca = pecas[pecaSelecionadaIndex];
+        if (peca != null && peca.pecaTransform != null)
         {
-            jaResolveu = true;
-            Debug.Log("Puzzle Resolvido! O Pergaminho foi restaurado.");
-
-            // Esconde as tiras
-            foreach (Image img in imagemTiras)
-            {
-                if (img != null) img.gameObject.SetActive(false);
-            }
-
-            // Exibe o pergaminho completo
-            if (pergaminhoCompleto != null)
-            {
-                pergaminhoCompleto.SetActive(true);
-            }
-
-            // Exibe a mensagem de vitória na tela
-            if (mensagemVitoria != null)
-            {
-                mensagemVitoria.SetActive(true);
-            }
-
-            // Inicia a contagem regressiva para fechar este painel e abrir o do fragmento
-            StartCoroutine(AguardarEExibirFragmento());
+            // Move a peça ignorando a pausa de tempo (Time.timeScale = 0)
+            peca.pecaTransform.anchoredPosition += deslocamento;
+            VerificarVitoria();
         }
     }
 
-    private IEnumerator AguardarEExibirFragmento()
-    {
-        // Usa Realtime para funcionar mesmo se o Time.timeScale estiver zerado (jogo pausado)
-        yield return new WaitForSecondsRealtime(tempoEsperaSegundos);
+    // --- VERIFICAÇÃO DE MONTAGEM DO PERGAMINHO ---
 
-        // Abre o painel do fragmento se estiver atribuído
-        if (painelFragmento != null)
+    public void VerificarVitoria()
+    {
+        if (puzzleConcluido) return;
+
+        foreach (var peca in pecas)
         {
-            painelFragmento.SetActive(true);
+            if (peca.pecaTransform == null) return;
+
+            float distancia = Vector2.Distance(peca.pecaTransform.anchoredPosition, peca.posicaoCorreta);
+            if (distancia > peca.tolerancia)
+            {
+                return; // Se pelo menos uma peça estiver fora do lugar, ainda não venceu
+            }
         }
 
-        // Fecha o painel do puzzle atual
-        FecharPainel();
+        // Se todas as peças estiverem nos lugares corretos:
+        puzzleConcluido = true;
+        ConcluirDesafioEExibirFragmento();
     }
 
-    public void FecharPainel()
+    // --- FLUXO DE CONCLUSÃO E EXIBIÇÃO DO FRAGMENTO 1 ---
+
+    public void ConcluirDesafioEExibirFragmento()
     {
-        gameObject.SetActive(false);
+        // 1. Esconde o painel do pergaminho
+        if (painelPergaminho != null)
+        {
+            painelPergaminho.SetActive(false);
+        }
+
+        // 2. Exibe o painel do Fragmento 1
+        if (painelFragmento1 != null)
+        {
+            painelFragmento1.SetActive(true);
+            StartCoroutine(OcultarFragmentoAposTempo());
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
+    }
+
+    // Conecte também ao botão "Fechar" manual do Painel Pergaminho (caso queira fechar antes)
+    public void FecharPainelPergaminhoEExibirFragmento()
+    {
+        ConcluirDesafioEExibirFragmento();
+    }
+
+    private IEnumerator OcultarFragmentoAposTempo()
+    {
+        // Aguarda os segundos configurados ignorando Time.timeScale = 0
+        yield return new WaitForSecondsRealtime(tempoExibicaoFragmento);
+
+        if (painelFragmento1 != null)
+        {
+            painelFragmento1.SetActive(false);
+        }
+
+        // Devolve o controle e a movimentação da personagem na cena
+        Time.timeScale = 1f;
     }
 }
