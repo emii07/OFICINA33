@@ -1,3 +1,4 @@
+
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,9 +8,8 @@ public class InventarioManager : MonoBehaviour
 
     [Header("Configurações do Inventário")]
     public List<ItemData> itens = new List<ItemData>();
-    public int limiteEspacos = 10;
+    public int limiteEspacos = 4;
 
-    // Evento disparado quando o inventário sofre alteração
     public delegate void OnInventarioMudou();
     public OnInventarioMudou onInventarioMudouCallback;
 
@@ -18,7 +18,7 @@ public class InventarioManager : MonoBehaviour
         if (Instancia == null)
         {
             Instancia = this;
-            DontDestroyOnLoad(gameObject); // Mantém os itens entre as cenas
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -30,7 +30,7 @@ public class InventarioManager : MonoBehaviour
     {
         if (itens.Count >= limiteEspacos)
         {
-            Debug.LogWarning("[Inventario] Inventário cheio!");
+            Debug.LogWarning("Inventário cheio!");
             return false;
         }
 
