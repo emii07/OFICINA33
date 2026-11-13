@@ -3,34 +3,28 @@ using UnityEngine.UI;
 
 public class PuzzleLivros : MonoBehaviour
 {
-    public GameObject painelPuzzle1;
+    public PainelPuzzle1Controle controlePainel;
+
     public GameObject personagem;
     public MonoBehaviour movimentoJogador;
+
     public Button botaoContinuar;
 
-    private Renderer[] renderizadores;
     private int livrosCorretos = 0;
     private bool puzzleAberto = false;
 
-    void Awake()
-    {
-        if (personagem != null)
-        {
-            renderizadores =
-                personagem.GetComponentsInChildren<Renderer>(true);
-        }
-    }
-
     void Start()
     {
-        painelPuzzle1.SetActive(false);
+        controlePainel.Fechar();
+
         botaoContinuar.gameObject.SetActive(false);
+
+        botaoContinuar.onClick.RemoveListener(FecharPuzzle);
+        botaoContinuar.onClick.AddListener(FecharPuzzle);
     }
 
     public void AbrirPuzzle()
     {
-        Debug.Log("1 - AbrirPuzzle foi chamado!");
-
         if (puzzleAberto) return;
 
         puzzleAberto = true;
@@ -38,23 +32,19 @@ public class PuzzleLivros : MonoBehaviour
 
         movimentoJogador.enabled = false;
 
-        foreach (Renderer r in renderizadores)
-        {
-            r.enabled = false;
-        }
-
-        Debug.Log("2 - Tentando ativar o painel!");
-
-        painelPuzzle1.SetActive(true);
-
-        Debug.Log("3 - Painel ativo? " +
-                  painelPuzzle1.activeSelf);
+        personagem.SetActive(false);
 
         botaoContinuar.gameObject.SetActive(false);
+
+        controlePainel.Abrir();
+
+        Debug.Log("Puzzle 1 aberto!");
     }
 
     public void LivroConcluido()
     {
+        if (!puzzleAberto) return;
+
         livrosCorretos++;
 
         if (livrosCorretos >= 3)
@@ -65,15 +55,16 @@ public class PuzzleLivros : MonoBehaviour
 
     public void FecharPuzzle()
     {
-        painelPuzzle1.SetActive(false);
+        if (!puzzleAberto) return;
 
-        foreach (Renderer r in renderizadores)
-        {
-            r.enabled = true;
-        }
+        controlePainel.Fechar();
+
+        personagem.SetActive(true);
 
         movimentoJogador.enabled = true;
 
         puzzleAberto = false;
+
+        Debug.Log("Puzzle 1 finalizado!");
     }
 }

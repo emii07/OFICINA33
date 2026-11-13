@@ -9,11 +9,15 @@ public class AbrirPuzzle1Trigger : MonoBehaviour
     {
         if (ativado) return;
 
-        if (other.CompareTag("Player"))
-        {
-            ativado = true;
-            controlador.AbrirPuzzle();
-            gameObject.SetActive(false);
-        }
+        if (!other.CompareTag("Player") &&
+            !other.transform.root.CompareTag("Player"))
+            return;
+
+        if (controlador == null) return;
+
+        ativado = true;
+        controlador.AbrirPuzzle();
+
+        GetComponent<Collider2D>().enabled = false;
     }
 }
