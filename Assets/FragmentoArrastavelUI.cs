@@ -7,7 +7,7 @@ public class FragmentoArrastavelUI : MonoBehaviour,
     public int posicaoAtual;
     public int posicaoCorreta;
 
-    public PuzzleFinal controlador;
+    public ControladorPuzzleFinal controlador;
 
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
@@ -62,30 +62,35 @@ public class FragmentoArrastavelUI : MonoBehaviour,
 
     public void OnDrop(PointerEventData eventData)
     {
-        GameObject objetoArrastado = eventData.pointerDrag;
+        GameObject objeto = eventData.pointerDrag;
 
-        if (objetoArrastado == null) return;
+        if (objeto == null) return;
 
         FragmentoArrastavelUI arrastado =
-            objetoArrastado.GetComponent<FragmentoArrastavelUI>();
+            objeto.GetComponent<FragmentoArrastavelUI>();
 
-        if (arrastado == null || arrastado == this) return;
+        if (arrastado == null || arrastado == this)
+            return;
 
         if (arrastado.rectTransform.parent != rectTransform.parent)
             return;
 
         Vector2 minhaPosicao = rectTransform.anchoredPosition;
+        Vector2 outraPosicao = arrastado.posicaoInicial;
 
-        rectTransform.anchoredPosition = arrastado.posicaoInicial;
+        rectTransform.anchoredPosition = outraPosicao;
         arrastado.rectTransform.anchoredPosition = minhaPosicao;
 
-        int posicaoTemporaria = posicaoAtual;
-        posicaoAtual = arrastado.posicaoAtual;
-        arrastado.posicaoAtual = posicaoTemporaria;
+        int temporaria = posicaoAtual;
 
+        posicaoAtual = arrastado.posicaoAtual;
+        arrastado.posicaoAtual = temporaria;
+
+        trocou = true;
         arrastado.trocou = true;
 
-        controlador.VerificarOrdem();
+        if (controlador != null)
+            controlador.VerificarOrdem();
     }
 
     public void OnEndDrag(PointerEventData eventData)

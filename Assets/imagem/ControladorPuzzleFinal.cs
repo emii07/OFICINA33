@@ -3,16 +3,10 @@ using TMPro;
 
 public class ControladorPuzzleFinal : MonoBehaviour
 {
-    [Header("Painel")]
     public GameObject painelPuzzleFinal;
-
-    [Header("Texto de conclusão")]
     public TMP_Text textoConclusao;
-
-    [Header("Botão continuar")]
     public GameObject botaoContinuar;
 
-    [Header("Quatro fragmentos")]
     public FragmentoArrastavelUI[] fragmentos;
 
     private bool concluido = false;
@@ -71,10 +65,13 @@ public class ControladorPuzzleFinal : MonoBehaviour
 
         Debug.Log("Livro da memória reconstruído!");
     }
-
     public void Continuar()
-    {
-        if (painelPuzzleFinal != null)
-            painelPuzzleFinal.SetActive(false);
-    }
+{
+    Debug.Log("BOTÃO CONTINUAR FOI CLICADO!");
+
+    if (painelPuzzleFinal != null)
+        painelPuzzleFinal.SetActive(false);
+    else
+        Debug.LogError("O campo Painel Puzzle Final está vazio!");
+}
 }
