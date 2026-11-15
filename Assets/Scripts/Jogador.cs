@@ -8,26 +8,43 @@ public class Jogador : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool noChao;
+    public static bool travadoNoMinigame = false; // Trava global controlada pelo minigame
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = 4f;
+        if (rb != null)
+        {
+            rb.gravityScale = 4f;
+        }
+        travadoNoMinigame = false; // Começa livre
     }
 
     void FixedUpdate()
     {
+        // Se estiver jogando o minigame, zera o movimento e não deixa andar
+        if (travadoNoMinigame)
+        {
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            return;
+        }
+
         float movimento = 0;
 
-        if (Keyboard.current.aKey.isPressed) movimento = -1;
-        if (Keyboard.current.dKey.isPressed) movimento = 1;
+        if (Keyboard.current != null)
+        {
+            if (Keyboard.current.aKey.isPressed) movimento = -1;
+            if (Keyboard.current.dKey.isPressed) movimento = 1;
+        }
 
         rb.linearVelocity = new Vector2(movimento * velocidade, rb.linearVelocity.y);
     }
 
     void Update()
     {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame && noChao)
+        if (travadoNoMinigame) return;
+
+        if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame && noChao)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
             rb.AddForce(Vector2.up * forcaPulo, ForceMode2D.Impulse);
@@ -38,6 +55,8 @@ public class Jogador : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Chao"))
+        {
             noChao = true;
+        }
     }
 }

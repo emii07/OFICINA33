@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems; // Necessário para limpar o foco e liberar os inputs
 
 public class Estatua : MonoBehaviour
 {
@@ -8,13 +9,18 @@ public class Estatua : MonoBehaviour
     private bool arrastando = false;
     private bool acertou = false;
 
-    public GameObject painelVitoria;
+    [Header("Configurações de Conclusão")]
+    public GameObject painelSilhuetas;        // O painel do minigame/livro que vai sumir sozinho
+    public MonoBehaviour scriptMovimentoPlayer; // Arraste o script 'Jogador' da sua personagem aqui
+    public GameObject painelVitoria;          // Painel de vitória opcional (se houver)
 
     private static int quantidadeAcertos = 0;
 
     void Start()
     {
         posicaoInicial = transform.position;
+        // Reseta o contador ao iniciar a cena caso necessário
+        quantidadeAcertos = 0; 
     }
 
     void OnMouseDown()
@@ -60,9 +66,22 @@ public class Estatua : MonoBehaviour
                         acertou = true;
                         quantidadeAcertos++;
 
-                        if (quantidadeAcertos >= 4)
+                        // Quando completar as 3 estatuetas:
+                        if (quantidadeAcertos >= 3)
                         {
-                            painelVitoria.SetActive(true);
+                            if (painelVitoria != null)
+                                painelVitoria.SetActive(true);
+
+                            if (painelSilhuetas != null)
+                                painelSilhuetas.SetActive(false);
+
+                            // Libera a movimentação instantaneamente pela variável global!
+                            Jogador.travadoNoMinigame = false;
+
+                            if (EventSystem.current != null)
+                            {
+                                EventSystem.current.SetSelectedGameObject(null);
+                            }
                         }
                     }
 

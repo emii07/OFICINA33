@@ -28,9 +28,14 @@ public class Luminaria : MonoBehaviour
                 }
             }
 
+            // Exibe a biografia na interface
             if (BiografiaUI.Instance != null)
             {
                 BiografiaUI.Instance.MostrarBiografia(nomeIntelectual, biografia);
+            }
+            else
+            {
+                Debug.LogWarning("Aviso: BiografiaUI.Instance não foi encontrado na cena!");
             }
         }
     }

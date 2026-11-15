@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/nivel 2.unity
     guid: 89e7a7d9060f76945937681bdbda6ab3
   - enabled: 1
+    path: Assets/Scenes/Sala dos grandes personagens 1.unity
+    guid: bc48768f6c5e88444b5f34bd68f9b71d
+  - enabled: 0
     path: Assets/Scenes/Sala dos grandes personagens.unity
     guid: 7214eb8cfcecc33428ce64951c5e891b
   - enabled: 1
