@@ -35,10 +35,11 @@ public class NPCBarreira : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    // Alterado para Trigger para permitir que a personagem entre na área de diálogo e pare diante do NPC
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Verifica se quem colidiu foi a personagem e se ele ainda não falou
-        if (collision.gameObject.CompareTag("Player") && !jaFalou)
+        // Verifica se quem entrou foi a personagem e se ele ainda não falou
+        if (collision.CompareTag("Player") && !jaFalou)
         {
             IniciarDialogo();
         }
@@ -71,7 +72,7 @@ public class NPCBarreira : MonoBehaviour
             painelDialogo.SetActive(false);
         }
 
-        // Desativa o colisor físico do NPC para a personagem conseguir passar por ele
+        // Desativa o colisor para liberar a passagem da personagem
         if (colisorBloqueio != null)
         {
             colisorBloqueio.enabled = false;
