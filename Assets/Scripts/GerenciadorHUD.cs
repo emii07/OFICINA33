@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro; // Necessário para usar TextMeshPro
 
 public class GerenciadorHUD : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class GerenciadorHUD : MonoBehaviour
 
     private bool jogoPausado = false;
     private bool inventarioAberto = false;
+
+    [Header("Contador de Estrelas")]
+    [SerializeField] public TextMeshProUGUI textoEstrelas; 
+    private int totalEstrelas = 0;
 
     void Update()
     {
@@ -67,7 +72,7 @@ public class GerenciadorHUD : MonoBehaviour
             painelInventario.SetActive(inventarioAberto);
         }
 
-        // Se o jogo estiver pausado e abrirmos o inventário, podemos optar por manter o jogo congelado
+        // Se o jogo estiver pausado e abrirmos o inventário, mantemos o jogo congelado
         Time.timeScale = (jogoPausado || inventarioAberto) ? 0f : 1f;
     }
 
@@ -82,6 +87,7 @@ public class GerenciadorHUD : MonoBehaviour
         // Retorna o tempo ao normal apenas se o pause também não estiver ativo
         Time.timeScale = jogoPausado ? 0f : 1f;
     }
+
     // --- FUNÇÃO DE CONTINUAR / FECHAR PAUSE ---
     public void Continuar()
     {
@@ -95,6 +101,7 @@ public class GerenciadorHUD : MonoBehaviour
         // Retorna o tempo ao normal apenas se o inventário também não estiver aberto
         Time.timeScale = inventarioAberto ? 0f : 1f;
     }
+
     // --- FUNÇÃO PARA FECHAR QUALQUER PAINEL ESPECÍFICO ---
     public void FecharPainel(GameObject painelParaFechar)
     {
@@ -103,7 +110,17 @@ public class GerenciadorHUD : MonoBehaviour
             painelParaFechar.SetActive(false);
         }
 
-        // Se quiser garantir que o tempo volta ao normal ao fechar um menu (opcional):
         Time.timeScale = 1f;
     }
-} 
+
+    // --- FUNÇÃO DE ADICIONAR ESTRELAS ---
+    public void AdicionarEstrelas(int quantidade)
+    {
+        totalEstrelas += quantidade;
+        
+        if (textoEstrelas != null)
+        {
+            textoEstrelas.text = totalEstrelas.ToString();
+        }
+    }
+}
