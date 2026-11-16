@@ -178,8 +178,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: JOGAR
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 04fd7bf269bcc9441855e0412f911fb7, type: 2}
-  m_sharedMaterial: {fileID: 6060822183450421900, guid: 04fd7bf269bcc9441855e0412f911fb7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -273,7 +273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &68539991
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1073,8 +1073,8 @@ MonoBehaviour:
     se colocar
     no lugar errado, a estatuta voltara para o lugar original'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 04fd7bf269bcc9441855e0412f911fb7, type: 2}
-  m_sharedMaterial: {fileID: 6060822183450421900, guid: 04fd7bf269bcc9441855e0412f911fb7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2044,8 +2044,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: VERIFICAR
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 04fd7bf269bcc9441855e0412f911fb7, type: 2}
-  m_sharedMaterial: {fileID: 6060822183450421900, guid: 04fd7bf269bcc9441855e0412f911fb7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2310,7 +2310,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "PARABENS VOCE AVAN\xC7OU DE FASE"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 04fd7bf269bcc9441855e0412f911fb7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e2354df9abd82864bb6369a22ac90bec, type: 2}
   m_sharedMaterial: {fileID: 6060822183450421900, guid: 04fd7bf269bcc9441855e0412f911fb7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2377,7 +2377,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -212.63, w: -58.129013}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &917343588
@@ -2447,8 +2447,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Jogo das siluetas
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 04fd7bf269bcc9441855e0412f911fb7, type: 2}
-  m_sharedMaterial: {fileID: 6060822183450421900, guid: 04fd7bf269bcc9441855e0412f911fb7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2908,7 +2908,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1274679212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4581,8 +4581,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: LINHA DO TEMPO
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 04fd7bf269bcc9441855e0412f911fb7, type: 2}
-  m_sharedMaterial: {fileID: 6060822183450421900, guid: 04fd7bf269bcc9441855e0412f911fb7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e2354df9abd82864bb6369a22ac90bec, type: 2}
+  m_sharedMaterial: {fileID: 4806511265721239256, guid: e2354df9abd82864bb6369a22ac90bec, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
