@@ -309,15 +309,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6469011, g: 0.21048418, b: 0.8113208, a: 1}
+  m_Color: {r: 0.83396226, g: 0.73409307, b: 0.25648266, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 4660362411685650583, guid: e26d69a5ad9dd8a43896044ed8906226, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -442,6 +442,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Estatua
   idEstatua: 2
+  painelSilhuetas: {fileID: 0}
+  scriptMovimentoPlayer: {fileID: 0}
   painelVitoria: {fileID: 1536885860}
 --- !u!50 &189590586
 Rigidbody2D:
@@ -624,6 +626,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Estatua
   idEstatua: 4
+  painelSilhuetas: {fileID: 0}
+  scriptMovimentoPlayer: {fileID: 0}
   painelVitoria: {fileID: 1536885860}
 --- !u!50 &207818584
 Rigidbody2D:
@@ -1478,6 +1482,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Estatua
   idEstatua: 3
+  painelSilhuetas: {fileID: 0}
+  scriptMovimentoPlayer: {fileID: 0}
   painelVitoria: {fileID: 1536885860}
 --- !u!50 &496225523
 Rigidbody2D:
@@ -2898,7 +2904,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1274679212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2912,15 +2918,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.3553542, g: 0, b: 1, a: 0.44705883}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -5240096036279657426, guid: 22afdc308e08d1e4fb25ecc9541db844, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3533,15 +3539,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.0056602955, b: 0.961383, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 4579838479811621133, guid: e2e95bd0c2f15324aa60e54e77d166b0, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3636,7 +3642,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1536885861
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3671,15 +3677,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7909528, g: 1, b: 0.103773475, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 4660362411685650583, guid: e26d69a5ad9dd8a43896044ed8906226, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4258,6 +4264,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::estatua
   idEstatua: 1
+  painelSilhuetas: {fileID: 0}
+  scriptMovimentoPlayer: {fileID: 0}
   painelVitoria: {fileID: 1536885860}
 --- !u!50 &1727877246
 Rigidbody2D:
@@ -5145,6 +5153,7 @@ MonoBehaviour:
   painelExplicacao: {fileID: 68539990}
   painelSilhuetas: {fileID: 0}
   scriptMovimentoPlayer: {fileID: 0}
+  totalDePecas: 4
 --- !u!1 &2088400495
 GameObject:
   m_ObjectHideFlags: 0

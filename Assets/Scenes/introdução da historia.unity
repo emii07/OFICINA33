@@ -154,7 +154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -13.308716, y: -6.6543884}
+  m_AnchoredPosition: {x: -13.308716, y: -6.654419}
   m_SizeDelta: {x: 26.6173, y: 29.9445}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &34445174
@@ -507,7 +507,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -13.309021, y: -2.9176025}
+  m_AnchoredPosition: {x: -13.309082, y: -2.9176025}
   m_SizeDelta: {x: 26.617, y: 37.4178}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &645907123
@@ -1119,8 +1119,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.6912842, y: -83.59971}
-  m_SizeDelta: {x: 354.408, y: 67.9741}
+  m_AnchoredPosition: {x: 20.5062, y: 256}
+  m_SizeDelta: {x: 437.7684, y: 83.9623}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1923859395
 MonoBehaviour:
@@ -1191,15 +1191,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.36779103, g: 0.7690027, b: 0.8207547, a: 1}
+  m_Color: {r: 0.6522398, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 4062064712773135498, guid: 928107abc80719540b0a417b73684dc3, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1331,8 +1331,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 4579838479811621133, guid: e2e95bd0c2f15324aa60e54e77d166b0, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
