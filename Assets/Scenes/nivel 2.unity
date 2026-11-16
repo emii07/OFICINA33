@@ -1012,7 +1012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48bdf8cf404fc9d4d8e139ac59d92ddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GerenciadorMapa
-  nomeSalaGrandesPersonagens: Sala dos grandes personagens
+  nomeSalaGrandesPersonagens: Sala dos grandes personagens 1
   nomeSalaIntelectuais: sala dos intelectuais
   nomeSalaValeEngenhos: vale dos engenhos
 --- !u!4 &1457951277

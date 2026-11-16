@@ -31,6 +31,11 @@ public class PuzzlePergaminho : MonoBehaviour
         {
             mensagemPergaminhoConcluido.SetActive(false);
         }
+
+        if (painelFragmento1 != null)
+        {
+            painelFragmento1.SetActive(false);
+        }
     }
 
     public void VerificarVitoriaGeral()
@@ -53,13 +58,23 @@ public class PuzzlePergaminho : MonoBehaviour
             mensagemPergaminhoConcluido.SetActive(true);
         }
 
-        Debug.Log("Pergaminho concluído com sucesso!");
+        // FECHAMENTO DO PUZZLE E ABERTURA DIRETA DO PAINEL AZUL
+        if (painelPergaminho != null)
+        {
+            painelPergaminho.SetActive(false); // Fecha o painel do minigame
+        }
+
+        if (painelFragmento1 != null)
+        {
+            painelFragmento1.SetActive(true); // Abre direto o painel azul do fragmento
+        }
+
+        Debug.Log("Pergaminho concluído com sucesso e fragmento exibido!");
     }
 
-    // LIGUE ESTE MÉTODOS AO EVENTO 'ON CLICK ()' DA SETA DE SAIR (BOTAO VOLTAR)
+    // Mantido caso o jogador feche manualmente antes de terminar
     public void ClicarBotaoSair()
     {
-        // 1. Oculta o painel do pergaminho/arquivo e a mensagem interna
         if (mensagemPergaminhoConcluido != null)
         {
             mensagemPergaminhoConcluido.SetActive(false);
@@ -70,18 +85,13 @@ public class PuzzlePergaminho : MonoBehaviour
             painelPergaminho.SetActive(false);
         }
 
-        // 2. Se o puzzle foi finalizado com sucesso, exibe o Fragmento 1
+        // Garante que se o puzzle acabou, o painel azul abre ao clicar no botão
         if (puzzleConcluido && painelFragmento1 != null)
         {
             painelFragmento1.SetActive(true);
-
-            // Executa o fechamento automático após os 4 segundos via Invoke no objeto deste script
-            CancelInvoke(nameof(EsconderFragmento1));
-            Invoke(nameof(EsconderFragmento1), tempoExibicaoFragmento);
         }
         else
         {
-            // Se fechou sem completar
             Time.timeScale = 1f;
         }
     }
