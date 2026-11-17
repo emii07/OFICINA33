@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InteracaoLinhaDoTempo : MonoBehaviour
 {
@@ -8,9 +9,14 @@ public class InteracaoLinhaDoTempo : MonoBehaviour
 
     private void Update()
     {
-        if (jogadorPerto && Input.GetKeyDown(KeyCode.E))
+        if (jogadorPerto &&
+            Keyboard.current != null &&
+            Keyboard.current.eKey.wasPressedThisFrame)
         {
             painelLinhaDoTempo.SetActive(true);
+
+            // Trava a movimentação da boneca
+            Jogador.travadoNoMinigame = true;
         }
     }
 
