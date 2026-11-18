@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 36c9dc02e01779745874c2e76d34c2dc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - audioSource: {instanceID: 0}
+  - somColetaFragmento: {fileID: 8300000, guid: 83b4c899835b9d7429e1cd8319c8554d, type: 3}
+  - somBotao: {fileID: 8300000, guid: 1c500eb6b4de9414b85df306f5eb91f1, type: 3}
+  - somRespostaCorreta: {fileID: 8300000, guid: 0ef0e9ed67cd52d41963a78834c15311, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

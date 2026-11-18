@@ -9,12 +9,20 @@ public class EstrelaColetavel : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            // 1. Atualiza a HUD/Placard
             GerenciadorHUD hud = FindFirstObjectByType<GerenciadorHUD>();
             if (hud != null)
             {
                 hud.AdicionarEstrelas(valor);
             }
 
+            // 2. Toca o som de coleta através do Gerenciador centralizado
+            if (GerenciadorDeSons.Instance != null)
+            {
+                GerenciadorDeSons.Instance.TocarSomColeta();
+            }
+
+            // 3. Destroi o objeto coletável da cena
             Destroy(gameObject);
         }
     }

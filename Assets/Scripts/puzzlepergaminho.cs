@@ -58,6 +58,12 @@ public class PuzzlePergaminho : MonoBehaviour
             mensagemPergaminhoConcluido.SetActive(true);
         }
 
+        // Toca o som de resposta correta/sucesso do fragmento recuperado
+        if (GerenciadorDeSons.Instance != null)
+        {
+            GerenciadorDeSons.Instance.TocarSomRespostaCorreta();
+        }
+
         // FECHAMENTO DO PUZZLE E ABERTURA DIRETA DO PAINEL AZUL
         if (painelPergaminho != null)
         {
