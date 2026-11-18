@@ -617,6 +617,7 @@ GameObject:
   - component: {fileID: 748315209}
   - component: {fileID: 748315208}
   - component: {fileID: 748315207}
+  - component: {fileID: 748315212}
   m_Layer: 0
   m_Name: Bibliotecaria
   m_TagString: Guardiao
@@ -690,7 +691,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.26, y: 3.74}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.26, y: 3.74}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -765,7 +766,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.26, y: 3.74}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -786,6 +787,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &748315212
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748315206}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 37b8740d5416b1c49ade78ec85afb67e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &770994547 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3332569811635120574, guid: 36f7e97b48f600d49b1db4760fba8c9a, type: 3}
@@ -1055,6 +1078,7 @@ GameObject:
   - component: {fileID: 965066468}
   - component: {fileID: 965066467}
   - component: {fileID: 965066466}
+  - component: {fileID: 965066471}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1209,12 +1233,34 @@ Transform:
   m_GameObject: {fileID: 965066465}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3069, y: 30, z: 0}
-  m_LocalScale: {x: 101.40324, y: 101.94482, z: 38.85618}
+  m_LocalPosition: {x: 3118.462, y: -88.2114, z: 0}
+  m_LocalScale: {x: 88.49188, y: 88.9645, z: 33.90874}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &965066471
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965066465}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a3af4384fc2ca5642952b75257a3373c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1066341248
 GameObject:
   m_ObjectHideFlags: 0

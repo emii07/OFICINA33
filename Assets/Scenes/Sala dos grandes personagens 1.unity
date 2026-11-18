@@ -5878,6 +5878,7 @@ GameObject:
   - component: {fileID: 1397351873}
   - component: {fileID: 1397351872}
   - component: {fileID: 1397351876}
+  - component: {fileID: 1397351877}
   m_Layer: 0
   m_Name: professor
   m_TagString: Untagged
@@ -6042,6 +6043,28 @@ MonoBehaviour:
     dos grandes personagens, vamos testar seus conhecimentos ? Ajude-me a encontrrar
     a forma certa  para cada grande Personalidade de cear\xE1-mirim!!"
   colisorBloqueio: {fileID: 1397351873}
+--- !u!95 &1397351877
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397351871}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 68341fd5665d4754ea103cccae3539ad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1417851829
 GameObject:
   m_ObjectHideFlags: 0
@@ -7902,6 +7925,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8686330674718287287, guid: 77c0a7ed742f61a4aba05bcc15fd1eb1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 38faeabe1fb977049b3a14326d7cd12f, type: 2}
     - target: {fileID: 8812633429685103335, guid: 77c0a7ed742f61a4aba05bcc15fd1eb1, type: 3}
       propertyPath: m_SortingOrder
       value: 1
