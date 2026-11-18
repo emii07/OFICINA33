@@ -16296,6 +16296,7 @@ RectTransform:
   - {fileID: 1659370304}
   - {fileID: 668810239}
   - {fileID: 1076087962}
+  - {fileID: 1934941181}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -16782,7 +16783,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.1519976, g: 0.4264151, b: 0.12792449, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -16801,11 +16802,11 @@ Transform:
   m_GameObject: {fileID: 1934941179}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5626.3877, y: 347.4334, z: 0}
-  m_LocalScale: {x: 752.0841, y: 287.264, z: 1}
+  m_LocalPosition: {x: -6943.801, y: 165.07341, z: 0}
+  m_LocalScale: {x: 858.96454, y: 328.08777, z: 1.1421124}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1901283979}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1934941182
 Rigidbody2D:
@@ -19688,6 +19689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventarioUI
   conteinerSlots: {fileID: 6244259916231941315}
+  verificarInventario: {fileID: 0}
 --- !u!114 &4945935497602834199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21081,7 +21083,6 @@ SceneRoots:
   - {fileID: 626202860}
   - {fileID: 1869803474}
   - {fileID: 312499649}
-  - {fileID: 1934941181}
   - {fileID: 1732006947}
   - {fileID: 1740343395}
   - {fileID: 152265566}
