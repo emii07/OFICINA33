@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -14,9 +13,9 @@ public class SlotEvento : MonoBehaviour, IDropHandler
         if (evento != null)
         {
             evento.transform.SetParent(transform);
+            evento.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
 
-            evento.GetComponent<RectTransform>().anchoredPosition =
-                Vector2.zero;
+            evento.MarcarComoArrastado();
         }
     }
 }

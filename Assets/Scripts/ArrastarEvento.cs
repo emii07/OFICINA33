@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -12,10 +11,17 @@ public class ArrastarEvento : MonoBehaviour,
 
     private bool bloqueado = false;
 
+    public bool FoiArrastado { get; private set; } = false;
+
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
+
+        if (canvasGroup == null)
+        {
+            canvasGroup = gameObject.AddComponent<CanvasGroup>();
+        }
     }
 
     public void BloquearArrasto()
@@ -42,5 +48,10 @@ public class ArrastarEvento : MonoBehaviour,
         if (bloqueado) return;
 
         canvasGroup.blocksRaycasts = true;
+    }
+
+    public void MarcarComoArrastado()
+    {
+        FoiArrastado = true;
     }
 }

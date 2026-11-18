@@ -12,11 +12,12 @@ public class VerificadorLinhaDoTempo : MonoBehaviour
     {
         for (int i = 0; i < slots.Length; i++)
         {
-            // Só aceita um evento que foi realmente colocado neste slot.
             ArrastarEvento evento =
                 slots[i].GetComponentInChildren<ArrastarEvento>();
 
-            if (evento == null || evento.transform.parent != slots[i].transform)
+            if (evento == null ||
+                evento.transform.parent != slots[i].transform ||
+                !evento.FoiArrastado)
             {
                 textoFeedback.color = Color.red;
                 textoFeedback.text =
@@ -42,7 +43,9 @@ public class VerificadorLinhaDoTempo : MonoBehaviour
                 slot.GetComponentInChildren<ArrastarEvento>();
 
             if (evento != null)
+            {
                 evento.BloquearArrasto();
+            }
         }
 
         painelSucesso.SetActive(true);
@@ -52,6 +55,8 @@ public class VerificadorLinhaDoTempo : MonoBehaviour
     public void Continuar()
     {
         Jogador.travadoNoMinigame = false;
+
+        painelSucesso.SetActive(false);
         painelLinhaDoTempo.SetActive(false);
     }
 }

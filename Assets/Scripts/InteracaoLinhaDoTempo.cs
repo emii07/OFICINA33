@@ -1,38 +1,25 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class InteracaoLinhaDoTempo : MonoBehaviour
 {
     public GameObject painelLinhaDoTempo;
 
-    private bool jogadorPerto = false;
+    private bool atividadeIniciada = false;
 
-    private void Update()
+    private void Start()
     {
-        if (jogadorPerto &&
-            Keyboard.current != null &&
-            Keyboard.current.eKey.wasPressedThisFrame)
-        {
-            painelLinhaDoTempo.SetActive(true);
-
-            // Trava a movimentação da boneca
-            Jogador.travadoNoMinigame = true;
-        }
+        painelLinhaDoTempo.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !atividadeIniciada)
         {
-            jogadorPerto = true;
-        }
-    }
+            atividadeIniciada = true;
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            jogadorPerto = false;
+            painelLinhaDoTempo.SetActive(true);
+
+            Jogador.travadoNoMinigame = true;
         }
     }
 }

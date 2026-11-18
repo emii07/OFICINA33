@@ -27,7 +27,7 @@ public class Jogador : MonoBehaviour
     {
         if (travadoNoMinigame)
         {
-            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            rb.linearVelocity = Vector2.zero;
             return;
         }
 
@@ -54,6 +54,7 @@ public class Jogador : MonoBehaviour
             noChao)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
+
             rb.AddForce(
                 Vector2.up * forcaPulo,
                 ForceMode2D.Impulse
