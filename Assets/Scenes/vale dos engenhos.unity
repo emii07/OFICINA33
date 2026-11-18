@@ -1034,6 +1034,23 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b353d70b95228d4e9c9001cd2b1860c, type: 3}
+--- !u!1 &103726730 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7899459340821548179, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+  m_PrefabInstance: {fileID: 1491881402}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &103726735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103726730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88cdbf23e42131b48a3b4d8c7256ca59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TocarSomBotao
 --- !u!1001 &130560045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1685,6 +1702,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!1 &178798838 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8266655782766787947, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+  m_PrefabInstance: {fileID: 1491881402}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &178798843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178798838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88cdbf23e42131b48a3b4d8c7256ca59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TocarSomBotao
 --- !u!1001 &193446808
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14078,6 +14112,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1947116441}
     m_Modifications:
+    - target: {fileID: 90857506392778508, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 90857506392778508, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 90857506392778508, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1888637563}
+    - target: {fileID: 90857506392778508, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 90857506392778508, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TocarSom
+      objectReference: {fileID: 0}
+    - target: {fileID: 90857506392778508, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TocarSomBotao, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 90857506392778508, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 515555139422939089, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -14274,6 +14336,34 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -307.6228
       objectReference: {fileID: 0}
+    - target: {fileID: 3355223605360408775, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3355223605360408775, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3355223605360408775, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1491881409}
+    - target: {fileID: 3355223605360408775, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3355223605360408775, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TocarSom
+      objectReference: {fileID: 0}
+    - target: {fileID: 3355223605360408775, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TocarSomBotao, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3355223605360408775, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3751817106454832790, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.1402
@@ -14319,24 +14409,60 @@ PrefabInstance:
       value: -307.6228
       objectReference: {fileID: 0}
     - target: {fileID: 4369608565746463874, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 147.4579
+      objectReference: {fileID: 0}
+    - target: {fileID: 4369608565746463874, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 133.7347
+      objectReference: {fileID: 0}
+    - target: {fileID: 4369608565746463874, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1061.1
+      value: -969
       objectReference: {fileID: 0}
     - target: {fileID: 4369608565746463874, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 530
+      value: 493.83716
       objectReference: {fileID: 0}
     - target: {fileID: 4531097968522164726, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 364820547734419144, guid: f28424c7d85520e4c9073ccd6ff3a1eb, type: 3}
     - target: {fileID: 4658840718664752974, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4658840718664752974, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4658840718664752974, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 674855366}
     - target: {fileID: 4658840718664752974, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 178798843}
+    - target: {fileID: 4658840718664752974, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4658840718664752974, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: FecharInventario
+      objectReference: {fileID: 0}
+    - target: {fileID: 4658840718664752974, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TocarSom
+      objectReference: {fileID: 0}
+    - target: {fileID: 4658840718664752974, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TocarSomBotao, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4658840718664752974, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5702138348738162850, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
       propertyPath: m_IsActive
@@ -14474,6 +14600,62 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -514.596
       objectReference: {fileID: 0}
+    - target: {fileID: 8898710863891223618, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8898710863891223618, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8898710863891223618, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 103726735}
+    - target: {fileID: 8898710863891223618, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8898710863891223618, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TocarSom
+      objectReference: {fileID: 0}
+    - target: {fileID: 8898710863891223618, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TocarSomBotao, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8898710863891223618, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8971807689036550858, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8971807689036550858, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8971807689036550858, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1993220323}
+    - target: {fileID: 8971807689036550858, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8971807689036550858, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TocarSom
+      objectReference: {fileID: 0}
+    - target: {fileID: 8971807689036550858, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TocarSomBotao, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8971807689036550858, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 9004632814065606156, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -14485,6 +14667,21 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6950187898389052164, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1491881405}
+    - targetCorrespondingSourceObject: {fileID: 6950187898389052164, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1491881409}
+    - targetCorrespondingSourceObject: {fileID: 8266655782766787947, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 178798843}
+    - targetCorrespondingSourceObject: {fileID: 7899459340821548179, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 103726735}
+    - targetCorrespondingSourceObject: {fileID: 6748786135461241943, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1888637563}
+    - targetCorrespondingSourceObject: {fileID: 1271213245345691210, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1993220323}
   m_SourcePrefab: {fileID: 100100000, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
 --- !u!224 &1491881403 stripped
 RectTransform:
@@ -14510,6 +14707,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SeguirPersonagem
   personagem: {fileID: 1515619835}
   offset: {x: 0, y: 0, z: 0}
+--- !u!114 &1491881409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491881404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88cdbf23e42131b48a3b4d8c7256ca59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TocarSomBotao
 --- !u!1001 &1499450292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18294,6 +18503,23 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b353d70b95228d4e9c9001cd2b1860c, type: 3}
+--- !u!1 &1888637558 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6748786135461241943, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+  m_PrefabInstance: {fileID: 1491881402}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1888637563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888637558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88cdbf23e42131b48a3b4d8c7256ca59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TocarSomBotao
 --- !u!1001 &1888705363
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19236,6 +19462,23 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b353d70b95228d4e9c9001cd2b1860c, type: 3}
+--- !u!1 &1993220318 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1271213245345691210, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
+  m_PrefabInstance: {fileID: 1491881402}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1993220323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993220318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88cdbf23e42131b48a3b4d8c7256ca59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TocarSomBotao
 --- !u!1001 &1993997247
 PrefabInstance:
   m_ObjectHideFlags: 0
