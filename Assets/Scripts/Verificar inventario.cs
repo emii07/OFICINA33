@@ -10,6 +10,11 @@ public class VerificarInventario : MonoBehaviour
 
     void Awake()
     {
+        // Linha temporária para resetar o Fragmento 1 e sumir com ele nesta cena
+        // (Apague esta linha ou comente-a novamente após testar e ver que funcionou)
+        PlayerPrefs.DeleteKey("Fragmento1Coletado");
+        PlayerPrefs.Save();
+
         VerificarStatusFragmentos();
     }
 
@@ -18,7 +23,7 @@ public class VerificarInventario : MonoBehaviour
         VerificarStatusFragmentos();
     }
 
-    void VerificarStatusFragmentos()
+    public void VerificarStatusFragmentos()
     {
         // Fragmento 1
         int coletado1 = PlayerPrefs.GetInt("Fragmento1Coletado", 0);
