@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class VerificadorLinhaDoTempo : MonoBehaviour
@@ -7,6 +8,7 @@ public class VerificadorLinhaDoTempo : MonoBehaviour
     public GameObject painelSucesso;
     public GameObject painelLinhaDoTempo;
     public TMP_Text textoFeedback;
+    public string nomeProximaCena;
 
     public void Verificar()
     {
@@ -56,7 +58,14 @@ public class VerificadorLinhaDoTempo : MonoBehaviour
     {
         Jogador.travadoNoMinigame = false;
 
-        painelSucesso.SetActive(false);
-        painelLinhaDoTempo.SetActive(false);
+        if (!string.IsNullOrEmpty(nomeProximaCena))
+        {
+            SceneManager.LoadScene(nomeProximaCena);
+        }
+        else
+        {
+            painelSucesso.SetActive(false);
+            painelLinhaDoTempo.SetActive(false);
+        }
     }
 }

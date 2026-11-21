@@ -14286,7 +14286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2014683111230359961, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
       propertyPath: m_text
-      value: "Invent\xE1rio"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2014683111230359961, guid: 0fa2586d2619363438694dbba2d69770, type: 3}
       propertyPath: m_fontSize

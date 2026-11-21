@@ -2291,11 +2291,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 436052231365020616, guid: 21e97a9ade233e4459717115844b7d36, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1179
+      value: 1193
       objectReference: {fileID: 0}
     - target: {fileID: 436052231365020616, guid: 21e97a9ade233e4459717115844b7d36, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 732.37
+      value: 833
       objectReference: {fileID: 0}
     - target: {fileID: 436052231365020616, guid: 21e97a9ade233e4459717115844b7d36, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2689,7 +2689,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6178439622911875875, guid: 36f7e97b48f600d49b1db4760fba8c9a, type: 3}
       propertyPath: m_text
-      value: Inventario
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6178439622911875875, guid: 36f7e97b48f600d49b1db4760fba8c9a, type: 3}
       propertyPath: m_fontSize
@@ -2787,6 +2787,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 364820547734419144, guid: f28424c7d85520e4c9073ccd6ff3a1eb, type: 3}
+    - target: {fileID: 8118332201487100748, guid: 36f7e97b48f600d49b1db4760fba8c9a, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8806702944184515484, guid: 36f7e97b48f600d49b1db4760fba8c9a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1

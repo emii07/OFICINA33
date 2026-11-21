@@ -18,7 +18,7 @@ public class Estatua : MonoBehaviour
     public float delayMudarCena = 2f;
 
     [Header("Meta de Acertos")]
-    public int totalEstátuasParaConcluir = 6;
+    public int totalEstátuasParaConcluir = 3;
 
     private static int quantidadeAcertos = 0;
     private static bool puzzleConcluido = false;
@@ -35,12 +35,13 @@ public class Estatua : MonoBehaviour
 
     void OnMouseDown()
     {
+        if (puzzleConcluido || acertou) return;
         arrastando = true;
     }
 
     void OnMouseDrag()
     {
-        if (Camera.main == null) return;
+        if (!arrastando || Camera.main == null) return;
 
         Vector3 posicaoMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         posicaoMouse.z = transform.position.z;
@@ -49,6 +50,7 @@ public class Estatua : MonoBehaviour
 
     void OnMouseUp()
     {
+        if (!arrastando) return;
         arrastando = false;
 
         Collider2D[] objetosPerto = Physics2D.OverlapCircleAll(transform.position, 0.5f);
@@ -70,19 +72,21 @@ public class Estatua : MonoBehaviour
                     {
                         puzzleConcluido = true;
 
-                        if (painelSilhuetas != null)
-                            painelSilhuetas.SetActive(false);
-
-                        if (painelVitoria != null)
-                            painelVitoria.SetActive(true);
-
                         Jogador.travadoNoMinigame = false;
 
                         if (EventSystem.current != null)
                             EventSystem.current.SetSelectedGameObject(null);
 
-                        if (!string.IsNullOrEmpty(nomeProximaCena))
+                        if (painelVitoria != null)
+                            painelVitoria.SetActive(true);
+
+                        // Inicia a coroutine enquanto este objeto ainda está ativo
+                        if (!string.IsNullOrEmpty(nomeProximaCena) && gameObject.activeInHierarchy)
                             StartCoroutine(MudarCenaComDelay());
+
+                        // Desativa o painel de silhuetas por último para não interromper o fluxo
+                        if (painelSilhuetas != null)
+                            painelSilhuetas.SetActive(false);
                     }
                 }
 
