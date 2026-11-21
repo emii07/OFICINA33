@@ -3872,7 +3872,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &787366808
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12046,6 +12046,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MenuJogo
   painelExplicacao: {fileID: 1687142246}
   painelSilhuetas: {fileID: 2134368706}
+  painelVitoria: {fileID: 0}
+  nomeProximaCena: 
   scriptMovimentoPlayer: {fileID: 1711375057}
   totalDePecas: 4
 --- !u!114 &1850790691
@@ -12951,7 +12953,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1985815083
 RectTransform:
   m_ObjectHideFlags: 0
