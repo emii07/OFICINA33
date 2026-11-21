@@ -1,5 +1,7 @@
+using System.Collections;
 using UnityEngine;
-using UnityEngine.EventSystems; // Necessário para limpar o foco e liberar os inputs
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class Estatua : MonoBehaviour
 {
@@ -9,18 +11,26 @@ public class Estatua : MonoBehaviour
     private bool arrastando = false;
     private bool acertou = false;
 
-    [Header("Configurações de Conclusão")]
-    public GameObject painelSilhuetas;        // O painel do minigame/livro que vai sumir sozinho
-    public MonoBehaviour scriptMovimentoPlayer; // Arraste o script 'Jogador' da sua personagem aqui
-    public GameObject painelVitoria;          // Painel de vitória opcional (se houver)
+    [Header("Configurações de Vitória e Cena")]
+    public GameObject painelSilhuetas;
+    public GameObject painelVitoria;
+    public string nomeProximaCena;
+    public float delayMudarCena = 2f;
+
+    [Header("Meta de Acertos")]
+    public int totalEstátuasParaConcluir = 6;
 
     private static int quantidadeAcertos = 0;
+    private static bool puzzleConcluido = false;
 
     void Start()
     {
         posicaoInicial = transform.position;
-        // Reseta o contador ao iniciar a cena caso necessário
-        quantidadeAcertos = 0; 
+        quantidadeAcertos = 0;
+        puzzleConcluido = false;
+
+        if (painelVitoria != null)
+            painelVitoria.SetActive(false);
     }
 
     void OnMouseDown()
@@ -30,12 +40,10 @@ public class Estatua : MonoBehaviour
 
     void OnMouseDrag()
     {
-        Vector3 posicaoMouse = Camera.main.ScreenToWorldPoint(
-            Input.mousePosition
-        );
+        if (Camera.main == null) return;
 
+        Vector3 posicaoMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         posicaoMouse.z = transform.position.z;
-
         transform.position = posicaoMouse;
     }
 
@@ -43,56 +51,59 @@ public class Estatua : MonoBehaviour
     {
         arrastando = false;
 
-        Collider2D[] objetosPerto =
-            Physics2D.OverlapCircleAll(transform.position, 0.5f);
+        Collider2D[] objetosPerto = Physics2D.OverlapCircleAll(transform.position, 0.5f);
 
         foreach (Collider2D objeto in objetosPerto)
         {
-            Silhueta silhueta =
-                objeto.GetComponent<Silhueta>();
+            Silhueta silhueta = objeto.GetComponent<Silhueta>();
 
-            if (silhueta != null)
+            if (silhueta != null && silhueta.VerificarEstatua(this))
             {
-                if (silhueta.VerificarEstatua(this))
+                transform.position = silhueta.transform.position;
+
+                if (!acertou)
                 {
-                    transform.position =
-                        silhueta.transform.position;
+                    acertou = true;
+                    quantidadeAcertos++;
 
-                    Debug.Log("CORRETO! 🎉");
-
-                    // Conta o acerto apenas uma vez
-                    if (!acertou)
+                    if (!puzzleConcluido && quantidadeAcertos >= totalEstátuasParaConcluir)
                     {
-                        acertou = true;
-                        quantidadeAcertos++;
+                        puzzleConcluido = true;
 
-                        // Quando completar as 3 estatuetas:
-                        if (quantidadeAcertos >= 3)
-                        {
-                            if (painelVitoria != null)
-                                painelVitoria.SetActive(true);
+                        if (painelSilhuetas != null)
+                            painelSilhuetas.SetActive(false);
 
-                            if (painelSilhuetas != null)
-                                painelSilhuetas.SetActive(false);
+                        if (painelVitoria != null)
+                            painelVitoria.SetActive(true);
 
-                            // Libera a movimentação instantaneamente pela variável global!
-                            Jogador.travadoNoMinigame = false;
+                        Jogador.travadoNoMinigame = false;
 
-                            if (EventSystem.current != null)
-                            {
-                                EventSystem.current.SetSelectedGameObject(null);
-                            }
-                        }
+                        if (EventSystem.current != null)
+                            EventSystem.current.SetSelectedGameObject(null);
+
+                        if (!string.IsNullOrEmpty(nomeProximaCena))
+                            StartCoroutine(MudarCenaComDelay());
                     }
-
-                    return;
                 }
+
+                return;
             }
         }
 
-        // Se não encontrou a silhueta correta
         transform.position = posicaoInicial;
+    }
 
-        Debug.Log("ERRADO! A estátua voltou para o lugar. ❌");
+    private IEnumerator MudarCenaComDelay()
+    {
+        yield return new WaitForSeconds(delayMudarCena);
+        SceneManager.LoadScene(nomeProximaCena);
+    }
+
+    public void MudarParaProximaCenaAgora()
+    {
+        Jogador.travadoNoMinigame = false;
+
+        if (!string.IsNullOrEmpty(nomeProximaCena))
+            SceneManager.LoadScene(nomeProximaCena);
     }
 }
