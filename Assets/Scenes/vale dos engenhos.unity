@@ -3981,8 +3981,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.44122314, y: 21.206467}
-  m_Size: {x: 137.84583, y: 137.84583}
+  m_Offset: {x: 80.11572, y: 220.76764}
+  m_Size: {x: 386.8396, y: 536.96814}
   m_Direction: 0
 --- !u!212 &412746567
 SpriteRenderer:
@@ -11876,6 +11876,7 @@ GameObject:
   - component: {fileID: 1301278588}
   - component: {fileID: 1301278587}
   - component: {fileID: 1301278586}
+  - component: {fileID: 1301278589}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -11959,6 +11960,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1301278589}
+        m_TargetAssemblyTypeName: TocarSomBotao, Assembly-CSharp
+        m_MethodName: TocarSom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1301278587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11997,6 +12010,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1301278584}
   m_CullTransparentMesh: 1
+--- !u!114 &1301278589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301278584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88cdbf23e42131b48a3b4d8c7256ca59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TocarSomBotao
 --- !u!1001 &1302242329
 PrefabInstance:
   m_ObjectHideFlags: 0

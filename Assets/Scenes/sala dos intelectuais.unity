@@ -1959,7 +1959,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1212752476994798812, guid: 77c0a7ed742f61a4aba05bcc15fd1eb1, type: 3}
       propertyPath: velocidade
-      value: 1000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4640339991730279058, guid: 77c0a7ed742f61a4aba05bcc15fd1eb1, type: 3}
       propertyPath: m_CollisionDetection
