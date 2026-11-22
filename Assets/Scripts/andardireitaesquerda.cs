@@ -1,65 +1,68 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-public class AndarDireitaEsquerda2D : MonoBehaviour
+public class andardireitaesquerda : MonoBehaviour
 {
     [Header("Movimento (Direita / Esquerda)")]
     public float velocidade = 5f;
-    [Tooltip("Marque se o sprite original já está olhando para a esquerda.")]
-    public bool spriteJaOlhaParaEsquerda = false;
+    public bool spriteJaOlhaParaDireita = false;
     public bool virarSpriteComFlipX = false;
 
-    [Header("Animação (Opcional)")]
+    [Header("Animação Direta")]
     public Animator animator;
-    public string parametroAndando = "Andando";
+    public string estadoParado = "respirando";
+    public string estadoAndar = "andando";
 
-    private Rigidbody2D rb;
+    private float escalaBaseX;
     private SpriteRenderer spriteRenderer;
-    private float moverX;
+    private string estadoAtual = "";
 
-    void Awake()
+    void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        escalaBaseX = Mathf.Abs(transform.localScale.x);
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        if (animator == null)
+            animator = GetComponent<Animator>();
+
+        TocarAnimacao(estadoParado);
     }
 
     void Update()
     {
-        if (Jogador.travadoNoMinigame)
+        float movimentoX = Input.GetAxisRaw("Horizontal");
+
+        // Move o personagem
+        transform.position += new Vector3(movimentoX * velocidade * Time.deltaTime, 0f, 0f);
+
+        // Vira o personagem sem estragar o tamanho (Scale)
+        if (movimentoX != 0)
         {
-            moverX = 0f;
-            AtualizarAnimacao(false);
-            return;
+            bool indoParaDireita = movimentoX > 0;
+
+            if (virarSpriteComFlipX && spriteRenderer != null)
+            {
+                spriteRenderer.flipX = spriteJaOlhaParaDireita ? !indoParaDireita : indoParaDireita;
+            }
+            else
+            {
+                float sinal = (indoParaDireita == spriteJaOlhaParaDireita) ? 1f : -1f;
+                transform.localScale = new Vector3(escalaBaseX * sinal, transform.localScale.y, transform.localScale.z);
+            }
+
+            TocarAnimacao(estadoAndar);
         }
-
-        // Esquerda = -1 (vai da direita para a esquerda), Direita = +1
-        moverX = Input.GetAxisRaw("Horizontal");
-
-        if (virarSpriteComFlipX && spriteRenderer != null && Mathf.Abs(moverX) > 0.01f)
+        else
         {
-            bool indoParaEsquerda = moverX < 0f;
-            spriteRenderer.flipX = spriteJaOlhaParaEsquerda ? !indoParaEsquerda : indoParaEsquerda;
+            TocarAnimacao(estadoParado);
         }
-
-        AtualizarAnimacao(Mathf.Abs(moverX) > 0.01f);
     }
 
-    void FixedUpdate()
+    void TocarAnimacao(string novoEstado)
     {
-        if (Jogador.travadoNoMinigame)
-        {
-            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
-            return;
-        }
+        if (animator == null || string.IsNullOrEmpty(novoEstado)) return;
+        if (estadoAtual == novoEstado) return;
 
-        rb.linearVelocity = new Vector2(moverX * velocidade, rb.linearVelocity.y);
-    }
-
-    void AtualizarAnimacao(bool andando)
-    {
-        if (animator == null || string.IsNullOrEmpty(parametroAndando))
-            return;
-
-        animator.SetBool(parametroAndando, andando);
+        estadoAtual = novoEstado;
+        animator.Play(novoEstado);
     }
 }
