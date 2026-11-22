@@ -45,7 +45,7 @@ EditorBuildSettings:
     path: Assets/Scenes/vale dos engenhos.unity
     guid: 6779096793a490e4c8f76ead5c903787
   - enabled: 1
-    path: Assets/Scenes/confronto final.unity
+    path: Assets/Scenes/ConfrontoFinal.unity
     guid: c63a89bf14c529248882a422dbfb44ac
   - enabled: 1
     path: Assets/Scenes/finallll.unity
