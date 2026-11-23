@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class ControladorPuzzleFinal : MonoBehaviour
@@ -7,6 +9,15 @@ public class ControladorPuzzleFinal : MonoBehaviour
     public GameObject painelPuzzleFinal;
     public TMP_Text textoConclusao;
     public GameObject botaoContinuar;
+    [Tooltip("Tempo em segundos antes de abrir o painel de vit贸ria (0 = imediato).")]
+    public float atrasoMostrarVitoria = 0f;
+
+    [Header("Painel de Vit贸ria")]
+    public GameObject painelVitoria;
+    public Image imagemUltimoFragmento;
+    public Sprite spriteUltimoFragmento;
+    public GameObject botaoProximaCena;
+    public string nomeProximaCena;
 
     [Header("Personagem")]
     public GameObject personagem;
@@ -24,7 +35,6 @@ public class ControladorPuzzleFinal : MonoBehaviour
         if (personagem != null)
         {
             sprites = personagem.GetComponentsInChildren<SpriteRenderer>(true);
-
             estadosOriginais = new bool[sprites.Length];
 
             for (int i = 0; i < sprites.Length; i++)
@@ -44,13 +54,19 @@ public class ControladorPuzzleFinal : MonoBehaviour
 
         if (botaoContinuar != null)
             botaoContinuar.SetActive(false);
+
+        if (painelVitoria != null)
+            painelVitoria.SetActive(false);
+
+        if (botaoProximaCena != null)
+            botaoProximaCena.SetActive(false);
     }
 
     public void AbrirPuzzle()
     {
+        CancelInvoke(nameof(MostrarPainelVitoria));
         Jogador.travadoNoMinigame = true;
 
-        // Faz a personagem desaparecer
         if (sprites != null)
         {
             foreach (SpriteRenderer sprite in sprites)
@@ -65,10 +81,13 @@ public class ControladorPuzzleFinal : MonoBehaviour
         if (botaoContinuar != null)
             botaoContinuar.SetActive(false);
 
+        if (painelVitoria != null)
+            painelVitoria.SetActive(false);
+
         if (painelPuzzleFinal != null)
             painelPuzzleFinal.SetActive(true);
 
-        Debug.Log("Puzzle Final aberto. Personagem parada e invis韛el!");
+        Debug.Log("Puzzle Final aberto. Personagem parada e invis铆vel!");
     }
 
     public void VerificarOrdem()
@@ -91,26 +110,31 @@ public class ControladorPuzzleFinal : MonoBehaviour
 
         if (textoConclusao != null)
         {
-            textoConclusao.text =
-                "Parab閚s! O Grande Livro foi reconstru韉o!";
-
+            textoConclusao.text = "Parab茅ns! O Grande Livro foi reconstru铆do!";
             textoConclusao.gameObject.SetActive(true);
         }
 
         if (botaoContinuar != null)
-            botaoContinuar.SetActive(true);
+            botaoContinuar.SetActive(false);
 
-        Debug.Log("Livro da mem髍ia reconstru韉o!");
+        Debug.Log("Livro da mem贸ria reconstru铆do! Abrindo painel de vit贸ria...");
+
+        if (atrasoMostrarVitoria > 0f)
+            Invoke(nameof(MostrarPainelVitoria), atrasoMostrarVitoria);
+        else
+            MostrarPainelVitoria();
     }
 
     public void Continuar()
     {
-        Debug.Log("Bot鉶 Continuar clicado!");
+        MostrarPainelVitoria();
+    }
 
+    public void MostrarPainelVitoria()
+    {
         if (painelPuzzleFinal != null)
             painelPuzzleFinal.SetActive(false);
 
-        // Faz a personagem reaparecer
         if (sprites != null)
         {
             for (int i = 0; i < sprites.Length; i++)
@@ -120,9 +144,42 @@ public class ControladorPuzzleFinal : MonoBehaviour
             }
         }
 
-        // Libera a movimenta玢o
+        if (painelVitoria != null)
+            painelVitoria.SetActive(true);
+
+        if (imagemUltimoFragmento != null)
+        {
+            if (spriteUltimoFragmento != null)
+                imagemUltimoFragmento.sprite = spriteUltimoFragmento;
+
+            imagemUltimoFragmento.gameObject.SetActive(true);
+        }
+
+        if (botaoProximaCena != null)
+            botaoProximaCena.SetActive(true);
+
+        Jogador.travadoNoMinigame = true;
+        Debug.Log("Painel de vit贸ria exibido com o 煤ltimo fragmento!");
+    }
+
+    public void IrParaProximaCena()
+    {
         Jogador.travadoNoMinigame = false;
 
-        Debug.Log("Personagem reapareceu e voltou a andar!");
+        if (!string.IsNullOrEmpty(nomeProximaCena))
+        {
+            SceneManager.LoadScene(nomeProximaCena);
+            return;
+        }
+
+        int proximaCenaIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        if (proximaCenaIndex < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(proximaCenaIndex);
+        }
+        else
+        {
+            Debug.LogWarning("Nenhuma pr贸xima cena configurada no Build Settings!");
+        }
     }
 }
