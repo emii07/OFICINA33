@@ -100,7 +100,7 @@ public class QuizFinal : MonoBehaviour
             personagem == null ||
             movimentoJogador == null)
         {
-            Debug.LogError("QuizFinal: faltam refer�ncias no Inspector.");
+            Debug.LogError("QuizFinal: faltam referências no Inspector.");
             return;
         }
 
@@ -200,7 +200,7 @@ public class QuizFinal : MonoBehaviour
             quizConcluido = true;
 
             textoPergunta.text =
-                "Parab�ns! Voc� concluiu o Desafio da Mem�ria!";
+                "Parabêns! Você concluiu o Desafio da Memória!";
 
             textoA.text = "";
             textoB.text = "";
